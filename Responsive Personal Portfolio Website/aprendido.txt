@@ -1,0 +1,5 @@
+
+
+Para a barra horizontal não aparecer e nem a imagem responsiva quebrar, foi mais útil usar a imagem de fundo colocada pelo css,
+usando configurações como transform: 50% e left: 50% ajudou a trancar a imagem para que ela não quebrasse o site em linha horizontal,
+mesmo como o cover e object-fill.
