@@ -8,7 +8,7 @@ function returnTop() {
     var maxWidth = window.innerWidth || document.documentElement.clientWidth;//largura da janela atual 
     var scrollTop =  window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
 
-    if (scrollTop + 500 >= windowHeight && maxWidth > 50) {
+    if (scrollTop + 500 >= windowHeight) {
         returntop.classList.add("js");
     } else {
         returntop.classList.remove("js");
@@ -46,22 +46,25 @@ if ('scrollRestoration' in history) {
 var blob = document.getElementById("blob");
 var distanciaTopo = blob.getBoundingClientRect().top;
 
-function delay() {
+function followScroll() {
     var posicaoTopo = blob.getBoundingClientRect().top;
     var diferencaRolagem = posicaoTopo - distanciaTopo;
     var scrollY = window.innerHeight || document.documentElement.clientHeight;
     var distanceScroll = window.screenY || document.documentElement.scrollTop;
     var scrollPassou80vh = window.scrollY > (window.innerHeight * 0.45);
     var somador = diferencaRolagem / 2;
+    //Para nova verificacao se passar scrolagem do header
+    var larguraTotal = window.innerHeight;
+    var deslocamentoVertical = window.pageYOffset || document.documentElement.scrollTop;
+    var quantidade_px_para_fazer = larguraTotal - 421;
 
-    if (scrollY > distanceScroll && !scrollPassou80vh) {
+    if (scrollY > distanceScroll && !scrollPassou80vh &&  deslocamentoVertical < larguraTotal)  {
         blob.style.marginTop = -diferencaRolagem - somador + 'px';
-        blob.classList.remove('active');
     } else {
-        blob.classList.add('active');
+        blob.style.marginTop = "0px;"
     }
 }
-window.addEventListener('scroll', delay);
+window.addEventListener('scroll', followScroll);
 
 /**
  * Icon Menu
@@ -101,16 +104,19 @@ boxes.forEach(box => {
  * Dark Light 
  */
 let darkLight = document.getElementById('dark-light');
-let changeTheme = document.querySelector('.desligado');
+let changeTheme = document.querySelector('.ligado');
 darkLight.onclick = () => {
     darkLight.classList.toggle('active');
 
     if (changeTheme.classList.contains('desligado')) {
         changeTheme.classList.remove('desligado');
         changeTheme.classList.add('ligado');
-    } else {
+    } else if (changeTheme.classList.contains('ligado')) {
         changeTheme.classList.remove('ligado');
         changeTheme.classList.add('desligado');
+    }
+    else {
+        changeTheme.classList.toggle('ligado');
     }
 }
 /**

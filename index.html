@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
+    <title>Joicemar Portfolio Website</title>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Portfolio Website</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-
+    <meta name="keywords" content="front-end, desenvolvimento web, programação, HTML, CSS, JavaScript, UX/UI, responsive design, acessibilidade web, frameworks, bibliotecas, design responsivo, web design, portfólio, desenvolvedor, sites, aplicações web">
     <!--Metas para pré vizialisação-->
-    <meta property="og:title" content="Título da Página" />
-    <meta property="og:description" content="Descrição da Página" />
-    <meta property="og:image" content="URL da Imagem" />
-    <meta property="og:url" content="URL da Página" />
+    <meta property="og:title" content="Joicemar .S. Morais - Portfólio Front-end Website" />
+    <meta property="og:description" 
+    content="Joicemar .S. Morais - Portfólio Front-end | 
+    Desenvolvedor Web especializado em HTML, CSS, JavaScript e Frameworks modernos. Veja meus projetos e entre em contato para colaborações e oportunidades." />
+    <meta property="og:image" content="img/page.jpg" />
+    <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta name="author" content="Joicemar .S. Morais">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
@@ -39,8 +42,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="preload" href="fonts/StudioFeixenSansLahti-Headline.woff2" as="font" type="font/woff2" crossorigin>
-
     <style>
         @font-face {
             font-family: medias;
@@ -51,7 +52,7 @@
 
 </head>
 
-<body class="desligado">
+<body class="ligado">
 
     <!--......................Start Navbar...................-->
     <nav class="container nav-container">
@@ -109,8 +110,7 @@
             <!--Description-->
             <div class="content">
                 <h3 id="welcome">Olá, Sou o Joicemar .S. Morais</h3>
-                <h1>Front-end</h1>
-                <h1>Developer</h1>
+                <h1>Front-end <br> Developer</h1>
                 <div class="btn">
                     <a href="#contact" id="faleComigo">Fale Comigo</a>
                     <a href="#" class="buttonRed" style="display: none;">Baixar CV</a>
@@ -176,7 +176,13 @@
                     <h5>Animações e Efeitos Visuais</h5>
                 </li>
                 <li>
+                    <h5>Otimização de Imagens</h5>
+                </li>
+                <li>
                     <h5>Github</h5>
+                </li>
+                <li>
+                    <h5>GUIMP</h5>
                 </li>
             </ul>
             <ul class="about-gri">
@@ -193,7 +199,7 @@
                     <h5>Alta Qualidade</h5>
                 </li>
                 <li>
-                    <h5>Aberto a Aprender</h5>
+                    <h5>Aprendizado em Equipe</h5>
                 </li>
             </ul>
         </div>
@@ -266,7 +272,7 @@
         <div class="contact-text">
             <h2>Fale Comigo</h2>
             <h4>Vamos trabalhar juntos</h4>
-            <p>Entre em contato comigo para discutir como posso ajudar em seus projetos.</p>
+            <p>Veja meus projetos e entre em contato comigo para discutir como posso ajudar em seus projetos, colaborações e oportunidades.</p>
             <div class="adress-list">
                 <address>Xangri-lá - RS - Brasil</address>
             </div>
@@ -298,8 +304,7 @@
 
                 <input type="text" placeholder="Nome" name="name" required autocomplete="off">
                 <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
-                <input type="text" name="subject" placeholder="Assunto" autocomplete="off">
-                <textarea placeholder="Digite aqui" id="floatingTextarea"></textarea>
+                <textarea placeholder="Mensagem" id="floatingTextarea"></textarea>
                 <input type="submit" value="submit" class="send buttonRed" onclick="send()">
             </form>
             <span id="span" style="opacity: 0;">.</span>
@@ -366,8 +371,32 @@
             reset: true
         })
         sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .main-text, .row', { delay: 150, origin: 'top' })
-        sr.reveal(' .one', { delay: 430, origin: 'top' })
-        sr.reveal(' .two', { delay: 755, origin: 'top' })
+        sr.reveal(' .one', { delay: 300, origin: 'top' })
+        sr.reveal(' .two', { delay: 450, origin: 'top' })
+
+        function teste() {
+            var larguraTotal = window.innerHeight;
+            var deslocamentoVertical = window.pageYOffset || document.documentElement.scrollTop;
+            var quantidade_px_para_fazer = larguraTotal - 421;
+            var headerContainer = document.querySelector('.header-container');
+
+            if (deslocamentoVertical > quantidade_px_para_fazer) {
+                var porcentagemRestante = (deslocamentoVertical - quantidade_px_para_fazer) / (larguraTotal - quantidade_px_para_fazer);
+                var opacidade = 1 - porcentagemRestante - (porcentagemRestante/2);
+                headerContainer.style.opacity = opacidade.toFixed(2);
+                
+                /**
+                 * 
+                 containers.forEach(function (container) {
+                 });
+                 //console.log("Largura: " + larguraTotal + " O que já foi scrollado: " + deslocamentoVertical);
+                */
+            }else{
+                headerContainer.style.opacity = 1;
+            }
+        }
+        window.addEventListener('scroll', teste);
+
     </script>
 </body>
 
