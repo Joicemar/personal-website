@@ -883,6 +883,7 @@ body .container.work-container {
     align-items: center;
     color: #ccc;
     max-width: 1400px;
+    padding-bottom: 100px;
 }
 body .container.work-container .main-text {
     margin-top: 5rem;
@@ -987,6 +988,8 @@ body .container.work-container .portfolio-content .row:nth-child(4) #card4 img:h
     animation: pulse 800ms ease-in-out;
     filter: url(#noise4);
 }
+
+/*---------------------------Start Contact container-----------------------------*/
 body .container.contact-container {
     width: 100%;
     height: auto;
@@ -1008,7 +1011,7 @@ body .container.contact-container .contact-text {
     height: 100%;
 }
 body .container.contact-container .contact-text h2 {
-    font-size: clamp(2rem, 4vw, 6rem);
+    font-size: clamp(2rem, 4vw, 6rem); transition: .4s ease;
 }
 body.ligado .container.contact-container .contact-text h2 {
     color: #222;
@@ -1027,27 +1030,22 @@ body .container.contact-container .contact-text p {
     font-weight: 600;
 }
 body.ligado .container.contact-container .contact-text p {
-    color: #333;
+    color: #333; transition: .4s ease;
 }
+
 body .container.contact-container .contact-text .adress-list {
     margin-bottom: 3rem;
 }
-body .container.contact-container .contact-text .adress-list li {
+body .container.contact-container .contact-text .adress-list address {
     margin-bottom: 1rem;
-}
-body .container.contact-container .contact-text .adress-list li a {
     display: block;
     color: #a8a8a8;
     font-size: #eb4a4a;
     font-weight: 600;
     transition: all 0.4s ease;
 }
-body.ligado .container.contact-container .contact-text .adress-list li a {
+body.ligado .container.contact-container .contact-text .adress-list address {
     color: #333;
-}
-body .container.contact-container .contact-text .adress-list li a:hover {
-    transform: scale(1.01) translateY(-2px);
-    color: var(--main-color);
 }
 body .container.contact-container .contact-text .contact-icons {
     display: flex;
@@ -1092,9 +1090,7 @@ body .container.contact-container .contact-form form textarea {
     font-style: italic;
     border-bottom: 1px solid #fff;
 }
-body .container.contact-container .contact-form form input:not(:empty){
-    background-color: #222 !important;
-}
+
 body .container.contact-container .contact-form form textarea {
     resize: none;
     height: 200px;

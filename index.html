@@ -268,9 +268,7 @@
             <h4>Vamos trabalhar juntos</h4>
             <p>Entre em contato comigo para discutir como posso ajudar em seus projetos.</p>
             <div class="adress-list">
-                <li><a target="_blank"
-                        href="https://www.google.com/maps/place/Xangri-lá+-+RS/@-29.810803,-50.1365698,12z/data=!3m1!4b1!4m6!3m5!1s0x95187823f54d255b:0xeeab3cd2597bea85!8m2!3d-29.8028065!4d-50.0412462!16s%2Fm%2F03qmcyr?entry=ttu">Xangri-lá
-                        - RS - Brasil</a></li>
+                <address>Xangri-lá - RS - Brasil</address>
             </div>
             <div class="contact-icons">
                 <a href="https://github.com/Joicemar" target="_blank" class="magnetic">
@@ -298,9 +296,9 @@
                 <input type="hidden" name="_autoresponse" value="Recebi sua mensagem. Logo responderei.">
                 <input type="hidden" name="_template" value="box">
 
-                <input type="text" placeholder="Enter Your Name" name="name" required>
-                <input type="email" placeholder="Enter Your Email" id="email" name="email" required>
-                <input type="text" name="subject" placeholder="Enter Your Subject">
+                <input type="text" placeholder="Nome" name="name" required autocomplete="off">
+                <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
+                <input type="text" name="subject" placeholder="Assunto" autocomplete="off">
                 <textarea placeholder="Digite aqui" id="floatingTextarea"></textarea>
                 <input type="submit" value="submit" class="send buttonRed" onclick="send()">
             </form>
@@ -363,14 +361,13 @@
     <script>
         // Inicializar o ScrollReveal
         const sr = ScrollReveal({
-            distance: '55px',
+            distance: '50px',
             duration: 1500,
             reset: true
         })
         sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .main-text, .row', { delay: 150, origin: 'top' })
         sr.reveal(' .one', { delay: 430, origin: 'top' })
         sr.reveal(' .two', { delay: 755, origin: 'top' })
-        sr.reveal(' .three', { delay: 830, origin: 'top' })
     </script>
 </body>
 
