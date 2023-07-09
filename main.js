@@ -3,19 +3,15 @@
  * Botao de retornar
  */
 var returntop = document.getElementById("return-top");
-returntop.classList.remove("no-js");
-returntop.classList.add("js");
-
 function returnTop() {
-    var zwindowHeight = window.innerHeight || document.documentElement.clientHeight;
-    var zscrollPosition = window.screenY || document.documentElement.scrollTop;
-    var zmaxWidth = window.innerWidth || document.documentElement.clientWidth;
-    var zscrollTop = window.screenY || document.documentElement.scrollTop;
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;//altura da janela atual
+    var maxWidth = window.innerWidth || document.documentElement.clientWidth;//largura da janela atual 
+    var scrollTop =  window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
 
-    if (zscrollPosition + 200 >= zwindowHeight) {
-        returntop.style.display = 'flex';
+    if (scrollTop + 500 >= windowHeight && maxWidth > 50) {
+        returntop.classList.add("js");
     } else {
-        returntop.style.display = 'none';
+        returntop.classList.remove("js");
     }
 }
 window.addEventListener('scroll', returnTop);
@@ -28,7 +24,7 @@ var navWidth = nav.offsetWidth; // Armazena a largura do elemento nav
 function handleScroll() {
     var windowHeight = window.innerHeight || document.documentElement.clientHeight;//altura da janela atual
     var maxWidth = window.innerWidth || document.documentElement.clientWidth;//largura da janela atual 
-    var scrollTop = window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
+    var scrollTop =  window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
 
     if (scrollTop + 100 >= windowHeight && maxWidth > 850) {
         nav.classList.add("fixed");
@@ -45,7 +41,7 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 /**
- * Header Animation; elemento acompanhar a rolagem
+ * Imagem Animation; elemento Imagem acompanhar um pouco a rolagem
  */
 var blob = document.getElementById("blob");
 var distanciaTopo = blob.getBoundingClientRect().top;
@@ -60,7 +56,6 @@ function delay() {
 
     if (scrollY > distanceScroll && !scrollPassou80vh) {
         blob.style.marginTop = -diferencaRolagem - somador + 'px';
-        blob.style.opacity = opacidade;
         blob.classList.remove('active');
     } else {
         blob.classList.add('active');
@@ -119,7 +114,7 @@ darkLight.onclick = () => {
     }
 }
 /**
- * Light Effect
+ * Light Effect inacabado
  */
 document.getElementsByClassName("luz") = () => {
     const rect = document.getElementsByClassName("luz").getBoundingClientRect(),

@@ -32,6 +32,8 @@
     font-family: 'Saira', sans-serif;
     font-family: "Genos", sans-serif;
     scroll-behavior: smooth;
+    font-variant-ligatures: common-ligatures; /* permitir a exibição das ligaduras tipográficas comuns em um elemento de texto*/
+    text-rendering: optimizeLegibility; /*melhora a forma do texto em telas menores*/
 }
 
 :root {
@@ -1214,6 +1216,7 @@ body footer .top {
     align-items: center;
     z-index: 7;
     right: 32px;
+    display: none;
 }
 body.ligado footer .top {
     color: #fff;
@@ -1232,5 +1235,5 @@ body.ligado footer .top {
 }
 body footer .top.js {
     transition: 0.7s;
-    display: none;
+    display: flex;
 } /*# sourceMappingURL=main.css.map */
