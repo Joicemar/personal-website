@@ -628,7 +628,7 @@ body .container.header-container .header-left .content h1 {
     opacity: 0;
     order: 2;
     animation: revelar 800ms ease forwards;
-    animation-delay: 60ms;
+    animation-delay: 120ms;
 }
 @keyframes revelar {
     0% {
@@ -661,8 +661,8 @@ body .container.header-container .header-left .content .btn {
     width: 100%;
     margin-top: 20px;
     order: 3;
-    animation: revelar 800ms ease forwards;
-    animation-delay: 100ms;
+    animation: revelar 800ms ease-out forwards;
+    animation-delay: 200ms;
 }
 body .container.header-container .header-left .content .btn a {
     position: relative;
@@ -1198,7 +1198,7 @@ body footer p {
     text-align: center;
 }
 
-body footer .top {
+body .top {
     position: fixed;
     bottom: 70px;
     width: 40px;
@@ -1217,22 +1217,22 @@ body footer .top {
     right: 32px;
     display: none;
 }
-body.ligado footer .top {
+body.ligado .top {
     color: #fff;
     background-color: #333;
     border-color: #333;
 }
 @media (max-width: 500px) {
-    body footer .top {
+    body .top {
         right: 20px;
     }
 }
 @media (max-width: 850px) {
-    body footer .top {
+    body .top {
         bottom: 95px;
     }
 }
-body footer .top.js {
+body .top.js {
     transition: 0.7s;
     display: flex;
 } /*# sourceMappingURL=main.css.map */

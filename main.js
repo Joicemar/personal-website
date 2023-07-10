@@ -56,7 +56,7 @@ function followScroll() {
     //Para nova verificacao se passar scrolagem do header
     var larguraTotal = window.innerHeight;
     var deslocamentoVertical = window.pageYOffset || document.documentElement.scrollTop;
-    var quantidade_px_para_fazer = larguraTotal - 421;
+    //var quantidade_px_para_fazer = larguraTotal - 421;
 
     if (scrollY > distanceScroll && !scrollPassou80vh &&  deslocamentoVertical < larguraTotal)  {
         blob.style.marginTop = -diferencaRolagem - somador + 'px';
