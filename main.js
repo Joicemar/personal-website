@@ -42,7 +42,7 @@ if ('scrollRestoration' in history) {
 }
 /**
  * Imagem Animation; elemento Imagem acompanhar um pouco a rolagem
- */
+ 
 var blob = document.getElementById("blob");
 var distanciaTopo = blob.getBoundingClientRect().top;
 
@@ -50,6 +50,7 @@ function followScroll() {
     var posicaoTopo = blob.getBoundingClientRect().top;
     var diferencaRolagem = posicaoTopo - distanciaTopo;
     var scrollY = window.innerHeight || document.documentElement.clientHeight;
+    const width = window.innerWidth || document.documentElement.clientWidth;
     var distanceScroll = window.screenY || document.documentElement.scrollTop;
     var scrollPassou80vh = window.scrollY > (window.innerHeight * 0.45);
     var somador = diferencaRolagem / 2;
@@ -58,13 +59,14 @@ function followScroll() {
     var deslocamentoVertical = window.pageYOffset || document.documentElement.scrollTop;
     //var quantidade_px_para_fazer = larguraTotal - 421;
 
-    if (scrollY > distanceScroll && !scrollPassou80vh &&  deslocamentoVertical < larguraTotal)  {
+    if (scrollY > distanceScroll && !scrollPassou80vh &&  deslocamentoVertical < larguraTotal && width > 500)  {
         blob.style.marginTop = -diferencaRolagem - somador + 'px';
     } else {
         blob.style.marginTop = "0px;"
     }
 }
-window.addEventListener('scroll', followScroll);
+window.addEventListener('scroll', followScroll); 
+*/
 
 /**
  * Icon Menu
