@@ -3,6 +3,7 @@
 
 <head>
     <title>🧑Joicemar | Portfólio - Modern Front-End</title>
+    <meta name="google-site-verification" content="google48a62be9977c927b.html" />
     <meta charset='utf-8'>
     <meta name="keywords"
         content="front-end, desenvolvimento web, programação, HTML, CSS, JavaScript, UX/UI, responsive design, acessibilidade web, frameworks, bibliotecas, design responsivo, web design, portfólio, desenvolvedor, sites, aplicações web">
@@ -11,8 +12,7 @@
     <meta property="og:description"
         content="Portfólio | Front-end - Joicemar .S. Morais | 
     Desenvolvedor Web especializado em HTML, CSS, JavaScript e Frameworks modernos. Veja meus projetos e entre em contato para colaborações e oportunidades." />
-    <meta property="og:image"
-        content="https://joicemar.github.io/personal-website/img/page.jpg" />
+    <meta property="og:image" type="image/webp" content="https://joicemar.github.io/personal-website/img/webp/page.webp" alt="Portfolio"/>
     <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -20,29 +20,13 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!--..................CSS LINK.......................-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!--Poppins font-->
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!--..................CSS LINK.......................-->
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
@@ -50,20 +34,20 @@
 
     <!--......................Start Navbar...................-->
     <nav class="container nav-container">
-        <a href="" class="logo">
+        <a href="" class="logo" name="logo">
             Portfólio.
         </a>
         <ul class="nav-link" id="nav-link">
-            <li><a href="#home" class="">Início</a>
+            <li><a href="#home" class="inicio" name="inicio">Início</a>
                 <div></div>
             </li>
-            <li><a href="#about" class="">Sobre</a>
+            <li><a href="#about" class="sobre" name="sobre">Sobre</a>
                 <div></div>
             </li>
-            <li><a href="#work" class="">Portfólio</a>
+            <li><a href="#work" class="portfolio" name="portfolio">Portfólio</a>
                 <div></div>
             </li>
-            <li><a href="#contact" class="">Contato</a>
+            <li><a href="#contact" class="contato" name="contato">Contato</a>
                 <div></div>
             </li>
         </ul>
@@ -85,7 +69,7 @@
                     xmlns:xlink="http://www.w3.org/1999/xlink" width="70%" id="blobSvg">
                     <defs>
                         <pattern id="image" patternUnits="userSpaceOnUse" width="500" height="500">
-                            <image id="me" class="blob-image" xlink:href="img/mebg.jpeg" width="550" height="650" />
+                            <image id="me" class="blob-image" xlink:href="img/webp/mebg.webp" width="550" height="650" />
                         </pattern>
                     </defs>
                     <path fill="url(#image)" stroke-width="5">
@@ -103,7 +87,7 @@
             <!--Description-->
             <div class="content">
                 <h1>Front-end<br>Developer</h1>
-                <h2 id="welcome">Olá, Sou o Joicemar .S. Morais</h2>
+                <h2 id="welcome"><span>Olá!</span> <br> Sou o <span><big>J</big></span>oicemar .S. Morais</h2>
                 <div class="btn">
                     <a href="#contact" id="faleComigo">Fale Comigo</a>
                 </div>
@@ -113,16 +97,17 @@
         <div class="socialMedias">
             <h5>Me Encontre</h5>
             <small></small>
-            <a href="https://github.com/Joicemar" target="_blank" class="magnetic">
+            <a href="https://github.com/Joicemar" target="_blank" rel="external" class="magnetic">
                 <i class='bx bxl-github'></i>
             </a>
-            <a href="https://www.linkedin.com/in/joicemar-s-morais-ba4a691b8/" target="_blank" class="magnetic">
+            <a href="https://www.linkedin.com/in/joicemar-s-morais-ba4a691b8/" target="_blank" rel="external"
+                class="magnetic">
                 <i class='bx bxl-linkedin'></i>
             </a>
-            <a href="mailto: joicemardev@gmail.com" target="_blank" class="magnetic">
+            <a href="mailto: joicemardev@gmail.com" target="_blank" rel="external" class="magnetic">
                 <i class='bx bxl-gmail'></i>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5551994029066" target="_blank" class="magnetic">
+            <a href="https://api.whatsapp.com/send?phone=5551994029066" target="_blank" rel="external" class="magnetic">
                 <i class='bx bxl-whatsapp'></i>
             </a>
         </div>
@@ -146,16 +131,16 @@
         <div>
             <ul class="about-gri">
                 <li>
-                    <h5>HTML</h5>
+                    <h5><abbr title="HyperText Markup Language">HTML</abbr></h5>
                 </li>
                 <li>
-                    <h5>CSS</h5>
+                    <h5><abbr title="Casting Style Sheets">CSS</abbr></h5>
                 </li>
                 <li>
                     <h5>Javascript</h5>
                 </li>
                 <li>
-                    <h5>SASS</h5>
+                    <h5><abbr title="Syntactically Awesome Style Sheets">SASS</abbr></h5>
                 </li>
                 <li>
                     <h5>Java</h5>
@@ -211,69 +196,95 @@
         </div>
         <div class="portfolio-content">
             <div class="row">
-                <div class="card" id="card"><img src="img/formulario.jpg" alt=""></div>
+                <div class="card" id="card">
+                    <picture>
+                        <source type="image/webp" srcset="img/webp/formulario.webp" alt="Imagem de um formulario">
+                        <img src="img/formulario.jpg" alt="Imagem de um formulario">
+                    </picture>
+                </div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML e CSS </h6>
                     </div>
                 </div>
                 <div class="link">
-                    <a target="_blank" href="https://chic-cheesecake-3dd2ff.netlify.app">Demo🔗</a>
-                    <a target="_blank" href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/form%20com%20input%20e%20placeholder%20personalizado">Github🔗</a>
+                    <a target="_blank" rel="external" href="https://chic-cheesecake-3dd2ff.netlify.app">Demo🔗</a>
+                    <a target="_blank" rel="external"
+                        href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/form%20com%20input%20e%20placeholder%20personalizado">Github🔗</a>
                 </div>
             </div>
             <div class="row">
-                <div class="card" id="card2"><img src="img/freelancerWebsite.jpg" alt=""></div>
+                <div class="card" id="card2">
+                    <picture>
+                        <source type="image/webp" srcset="img/webp/freelancerWebsite.webp" alt="Imagem de um site">
+                        <img src="img/freelancerWebsite.jpg" alt="Imagem de um site">
+                    </picture>
+                </div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML, CSS e Javascript</h6>
                     </div>
                 </div>
                 <div class="link">
-                    <a target="_blank"
+                    <a target="_blank" rel="external"
                         href="https://64a4e15b9eb04f49092b5ca3--silver-sunshine-447210.netlify.app">Demo🔗</a>
-                    <a target="_blank"
+                    <a target="_blank" rel="external"
                         href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/Responsive%20Morden%20Website">Github🔗</a>
                 </div>
             </div>
 
             <div class="row one">
-                <div class="card" id="card3"><img src="img/awax.jpg" alt=""></div>
+                <div class="card" id="card3">
+                    <picture>
+                        <source type="image/webp" srcset="img/webp/awax.webp" alt="Imagem de um site">
+                        <img src="img/awax.jpg" alt="Imagem de um site">
+                    </picture>
+                </div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML SASS e Javascript / Trabalhando numa nova versão</h6>
                     </div>
                 </div>
                 <div class="link">
-                    <a href="https://resplendent-gnome-0a341f.netlify.app" target="_blank">Demo🔗</a>
-                    <a href="https://github.com/Joicemar/-HTML5-e-CSS3/tree/main/html-css%20B7Web/ex63%20Projeto%20Awax"
+                    <a rel="external" href="https://resplendent-gnome-0a341f.netlify.app" target="_blank">Demo🔗</a>
+                    <a rel="external"
+                        href="https://github.com/Joicemar/-HTML5-e-CSS3/tree/main/html-css%20B7Web/ex63%20Projeto%20Awax"
                         target="_blank">Github🔗</a>
                 </div>
             </div>
             <div class="row two">
-                <div class="card" id="card4"><img src="img/projeto3.jpg" alt=""></div>
+                <div class="card" id="card4">
+                    <picture>
+                        <source type="image/webp" srcset="img/webp/projeto3.webp" alt="Imagem de um site">
+                        <img src="img/projeto3.jpg" alt="Imagem de um site">
+                    </picture>
+                </div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML e SCSS </h6>
                     </div>
                 </div>
                 <div class="link">
-                    <a target="_blank"
+                    <a target="_blank" rel="external"
                         href="https://64ab1b1422114663d225123e--bright-zuccutto-533259.netlify.app">Demo🔗</a>
-                    <a target="_blank"
+                    <a target="_blank" rel="external"
                         href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/Travel%20Booking%20Website">Github🔗</a>
                 </div>
             </div>
 
             <div class="row three">
-                <div class="card" id="card5"><img src="img/projeto4.jpg" alt=""></div>
+                <div class="card" id="card5">
+                    <source type="image/webp" srcset="img/webp/projeto4.webp" alt="Imagem de um site">
+                        <img src="img/projeto4.jpg" alt="Imagem de um site">
+                    </picture>
+                </div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML, CSS e Javascript / Trabalhando numa nova versão</h6>
                     </div>
                 </div>
                 <div class="link">
-                    <a href="https://guileless-panda-302437.netlify.app#">Demo🔗</a>
+                    <a rel="external" target="_blank" href="https://guileless-panda-302437.netlify.app#">Demo🔗</a>
                     <a href="#">Github🔗</a>
                 </div>
             </div>
@@ -292,16 +303,18 @@
                 <address>Xangri-lá - RS - Brasil</address>
             </div>
             <div class="contact-icons">
-                <a href="https://github.com/Joicemar" target="_blank" class="magnetic">
+                <a href="https://github.com/Joicemar" target="_blank" rel="external" class="magnetic">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="https://www.linkedin.com/in/joicemar-s-morais-ba4a691b8/" target="_blank" class="magnetic">
+                <a href="https://www.linkedin.com/in/joicemar-s-morais-ba4a691b8/" target="_blank" rel="external"
+                    class="magnetic">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="mailto: joicemardev@gmail.com" target="_blank" class="magnetic">
+                <a href="mailto: joicemardev@gmail.com" target="_blank" rel="external" class="magnetic">
                     <i class='bx bxl-gmail'></i>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5551994029066" target="_blank" class="magnetic">
+                <a href="https://api.whatsapp.com/send?phone=5551994029066" target="_blank" rel="external"
+                    class="magnetic">
                     <i class='bx bxl-whatsapp'></i>
                 </a>
             </div>
@@ -381,7 +394,6 @@
         <p>Developed with love by Joicemar S Morais &copy 2023</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="main.js"></script>
