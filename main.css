@@ -578,12 +578,12 @@ body .container.header-container .socialMedias a:hover i {
     color: #eb4a4a;
     font-size: clamp(30px, 2.5vw, 60px);
     bottom: 66px;
-    right: 44%;
     z-index: 8;
     width: 40px;
     text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
 }
-
 body .container.header-container .header-left {
     flex: 1;
     display: flex;
@@ -1228,8 +1228,7 @@ body .container.contact-container .contact-form form .send {
     width: 190px;
     height: 55px;
     font-size: clamp(10px, 1vw, 14px);
-    font-family: "Poppins", Serif;
-    font-family: "Public Sans", Sans-serif;
+    font-family: var(--Genos), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     font-weight: bold;
     text-transform: uppercase;
     word-spacing: 7px;
@@ -1247,12 +1246,14 @@ body .container.contact-container .contact-form form .send {
     background-color: #eb4a4a;
     color: #fff;
 }
-
-body .container.contact-container .contact-form form .send:hover {
-    background: #eb4a4a;
-    color: #ddd;
+body .container.contact-container .contact-form form .send > svg{
+    width   : 20px; 
+    left    : 10px; 
+    position: relative;
 }
-
+body .container.contact-container .contact-form form .send:hover{
+    color     : #ddd;
+}
 body .container.contact-container .contact-form form .send:not(:hover) {
     display: flex;
     justify-content: center;
@@ -1260,8 +1261,6 @@ body .container.contact-container .contact-form form .send:not(:hover) {
     width: 190px;
     height: 55px;
     font-size: clamp(10px, 1vw, 14px);
-    font-family: "Poppins", Serif;
-    font-family: "Public Sans", Sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     word-spacing: 7px;
@@ -1270,9 +1269,9 @@ body .container.contact-container .contact-form form .send:not(:hover) {
     margin-top: 20px;
     cursor: pointer;
     justify-self: left;
-    border: 1px solid #eb4a4a;
+    border: 1px solid #eee;
     background: transparent;
-    color: #eb4a4a;
+    color: #dedede;
     transition: 0.3s;
 }
 
@@ -1280,6 +1279,11 @@ body.ligado .container.contact-container .contact-form form .send {
     background-color: #222;
     border-color: #222;
     color: #fff;
+}
+body.ligado .send > svg > path,
+body.ligado .send > svg{
+    fill    : #fff;
+    stroke    : #fff;
 }
 
 body.ligado .container.contact-container .contact-form form .send:hover {

@@ -123,7 +123,7 @@
                 <i class='bx bxl-whatsapp'></i>
             </a>
         </div>
-        <a href="#about" id="downarrow">&#65516;</a>
+        <a href="#about" id="downarrow"><img src="assets/mouse.svg" alt="rolagem"></a>
     </header>
     <!--......................End header...................-->
 
@@ -131,11 +131,12 @@
     <section id="about" class="container about-container">
         <h2 class="about-tittle">Sobre Mim</h2>
         <p class="about-description">
-            <strong>Saudações!</strong> Meu nome é <strong>Joicemar da Silva Morais</strong>, sou estudante 
-            de graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> e também 
-            busco conhecimento de forma <strong>autodidata</strong>. Tenho grande interesse 
-            em <strong>UI/UX design</strong> e adoro criar <strong>sites responsivos</strong>. Estou 
-            constantemente pesquisando em diversas fontes para me manter <strong>atualizado e melhorar minhas habilidades</strong>.
+            <strong>Saudações!</strong> Meu nome é <strong>Joicemar da Silva Morais</strong>, sou estudante
+            de graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> e também
+            busco conhecimento de forma <strong>autodidata</strong>. Tenho grande interesse
+            em <strong>UI/UX design</strong> e adoro criar <strong>sites responsivos</strong>. Estou
+            constantemente pesquisando em diversas fontes para me manter <strong>atualizado e melhorar minhas
+                habilidades</strong>.
         </p>
         <h3 class="about-resume"><strong>Algumas Tecnologias e Habilidades</strong></h3>
         <div>
@@ -327,19 +328,21 @@
         </div>
 
         <div class="contact-form">
-            <form action="https://formsubmit.co/joicemardesigner@gmail.com" method="POST" id="formulario" onsubmit="">
+            <form action="https://formsubmit.co/joicemardev@gmail.com" method="POST" id="formulario" onsubmit="">
                 <input type="hidden" name="_captcha" value="false">
-                <!--
-                -->
                 <input type="hidden" name="_next" value="https://joicemar.github.io/personal-website/messageSend.html">
                 <input type="hidden" name="_autoresponse" value="Recebi sua mensagem. Logo responderei.">
                 <input type="hidden" name="_template" value="box">
-
+            
                 <input type="text" placeholder="Nome" name="name" required autocomplete="off">
                 <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
-                <textarea placeholder="Mensagem" id="floatingTextarea"></textarea>
-                <input type="submit" value="submit" class="send buttonRed" onclick="send()">
+                <textarea placeholder="Mensagem" id="floatingTextarea" name="message"></textarea>
+                <button type="submit" class="send" onclick="send()">
+                    Enviar
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#fff" fill-rule="evenodd" d="M4.592 15.304C2.344 9.787 6.403 3.75 12.36 3.75h.321a8.068 8.068 0 0 1 8.068 8.068a8.982 8.982 0 0 1-8.982 8.982h-7.82a.75.75 0 0 1-.47-1.335l1.971-1.583a.25.25 0 0 0 .075-.29l-.932-2.288ZM12.36 5.25c-4.893 0-8.226 4.957-6.38 9.488l.932 2.289a1.75 1.75 0 0 1-.525 2.024l-.309.249h5.689a7.482 7.482 0 0 0 7.482-7.482a6.568 6.568 0 0 0-6.568-6.568h-.321Z" clip-rule="evenodd"/></svg>
+                </button>
             </form>
+            
             <span id="span" style="opacity: 0;">.</span>
         </div>
     </section>
@@ -411,7 +414,7 @@
             duration: 1500,
             reset: false
         })
-        sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .main-text, .row', { delay: 150, origin: 'top' })
+        sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .about-description, .about-resume, .main-text, .row', { delay: 150, origin: 'top' })
         sr.reveal(' .one', { delay: 300, origin: 'top' })
         sr.reveal(' .two', { delay: 450, origin: 'top' })
 
