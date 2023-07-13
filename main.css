@@ -583,7 +583,7 @@ body .container.header-container .socialMedias a:hover i {
     text-align: center;
     transform: translateX(-50%) rotate(90deg);
     left: 50%;
-    font-size: 30px;
+    font-size: 25px;
 }
 body .container.header-container .header-left {
     flex: 1;
