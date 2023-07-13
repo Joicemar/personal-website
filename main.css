@@ -581,8 +581,9 @@ body .container.header-container .socialMedias a:hover i {
     z-index: 8;
     width: 40px;
     text-align: center;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(90deg);
     left: 50%;
+    font-size: 30px;
 }
 body .container.header-container .header-left {
     flex: 1;
@@ -1322,28 +1323,35 @@ body footer p {
 body .top {
     position: fixed;
     bottom: 70px;
-    width: 40px;
-    height: 40px;
-    color: #eb4a4a;
-    font-size: 30pt;
+    width: 35px;
+    height: 35px;
+    color: #111;
+    font-size: 20pt;
     border-radius: 4px;
     background-color: #eb4a4a;
-    background-color: #fff;
-    border: 1px solid #eb4a4a;
-    mix-blend-mode: luminosity;
+    background-color: #ccc;
+    mix-blend-mode: exclusion;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     z-index: 7;
     right: 32px;
     display: none;
 }
-
+.top > div{
+    transform: rotate(-90deg);
+    position: relative;
+    left: 2px;
+}
+/*
 body.ligado .top {
     color: #fff;
     background-color: #333;
     border-color: #333;
 }
+*/
 
 @media (max-width: 500px) {
     body .top {
