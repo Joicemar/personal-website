@@ -6,7 +6,7 @@ var returntop = document.getElementById("return-top");
 function returnTop() {
     var windowHeight = window.innerHeight || document.documentElement.clientHeight;//altura da janela atual
     var maxWidth = window.innerWidth || document.documentElement.clientWidth;//largura da janela atual 
-    var scrollTop =  window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
+    var scrollTop = window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
 
     if (scrollTop + 500 >= windowHeight) {
         returntop.classList.add("js");
@@ -19,23 +19,55 @@ window.addEventListener('scroll', returnTop);
 /**
  * Navigation
  */
-var nav = document.querySelector('.nav-container');
-var navWidth = nav.offsetWidth; // Armazena a largura do elemento nav
-function handleScroll() {
-    var windowHeight = window.innerHeight || document.documentElement.clientHeight;//altura da janela atual
-    var maxWidth = window.innerWidth || document.documentElement.clientWidth;//largura da janela atual 
-    var scrollTop =  window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
+const nav = document.querySelector('.nav-container');
+const boxes = document.querySelectorAll('.magnetic');
+const navWidth = nav.offsetWidth;
 
-    if (scrollTop + 100 >= windowHeight && maxWidth > 850) {
-        nav.classList.add("fixed");
-        nav.classList.add("js");
-        nav.style.marginTop = scrollTop + 'px';
-    } else {
-        nav.classList.remove("fixed");
-        nav.style.marginTop = 16 + 'px';
-    }
+function handleScroll() {
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const maxWidth = window.innerWidth || document.documentElement.clientWidth;
+    const scrollTop = window.pageYOffset || window.screenY || document.documentElement.scrollTop;
+
+    requestAnimationFrame(() => {
+        if (scrollTop + 100 >= windowHeight && maxWidth > 850) {
+            nav.classList.add('fixed', 'js');
+            nav.style.marginTop = `${scrollTop}px`;
+        } else {
+            nav.classList.remove('fixed');
+            nav.style.marginTop = '16px';
+        }
+    });
 }
+/**
+ * Magnetic Effect */
+function handleBoxMovement(e) {
+    const x = e.offsetX;
+    const y = e.offsetY;
+    const boxWidth = this.clientWidth;
+    const boxHeight = this.clientHeight;
+    const moveX = x - boxWidth / 2;
+    const moveY = y - boxHeight / 2;
+
+    requestAnimationFrame(() => {
+        this.style.transition = '.11s ease';
+        this.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+}
+
+function resetBoxMovement() {
+    requestAnimationFrame(() => {
+        this.style.transition = '.6s ease';
+        this.style.transform = 'translate(0px, 0px)';
+    });
+}
+
 window.addEventListener('scroll', handleScroll);
+
+boxes.forEach(box => {
+    box.addEventListener('mousemove', handleBoxMovement);
+    box.addEventListener('mouseout', resetBoxMovement);
+});
+
 // Desabilitar a restauração automática de rolagem
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -79,30 +111,6 @@ document.getElementById('toggle').onclick = () => {
 }
 
 /**
- * Hover magnetico
- */
-let boxes = document.querySelectorAll('.magnetic');
-boxes.forEach(box => {
-    box.addEventListener('mousemove', (e) => {
-        let x = e.offsetX;
-        let y = e.offsetY;
-        let boxWidth = box.clientWidth;
-        let boxHeight = box.clientHeight;
-        let moveX = (x - boxWidth / 2);
-        let moveY = (y - boxHeight / 2);
-        box.style.transition = '.11s ease';
-        box.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
-    });
-});
-boxes.forEach(box => {
-    box.addEventListener('mouseout', () => {
-        box.style.transition = `.6s ease`;
-        box.style.transform = `translate(0px, 0px)`;
-        //Same thing with the span element
-    });
-});
-
-/**
  * Dark Light 
  */
 let darkLight = document.getElementById('dark-light');
@@ -123,17 +131,16 @@ darkLight.onclick = () => {
 }
 /**
  * Light Effect inacabado
- */
 document.getElementsByClassName("luz") = () => {
     const rect = document.getElementsByClassName("luz").getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
-
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+    
     document.getElementsByClassName("luz").style.setProperty("--mouse-x", `${x}px`);
     document.getElementsByClassName("luz").style.setProperty("--mouse-y", `${y}px`);
 };
+*/
 
 /**
- *  Reveal on Scroll
+ *  Cursor
  */
-
