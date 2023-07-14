@@ -454,7 +454,7 @@
         var cursor = document.getElementById('cursor');
         const body = document.querySelector('body');
         cursor.classList.add('active__js');
-
+        cursor.classList.add('visible');
 
         function updateCursorPosition(e) {
             requestAnimationFrame(function () {
@@ -465,28 +465,20 @@
 
         document.addEventListener('mousemove', updateCursorPosition);
         window.addEventListener('scroll', function () {
-            cursor.style.display = 'none';
+            cursor.classList.remove('visible');
         });
         window.addEventListener('mousemove', function () {
-            cursor.style.display = 'initial';
+            cursor.classList.add('visible');
         });
-        // Obtém uma referência ao elemento HTML
-        const meuElemento = document.getElementById('meu-elemento');
 
-        // Define as funções de manipulação para os eventos mouseleave e mouseenter
-        const manipuladorMouseLeave = () => {
-            cursor.style.display = 'none';
-        };
-        
-        const manipuladorMouseEnter = () => {
-            cursor.style.display = 'initial';
-        };
+        let maxwidth = window.innerWidth;
 
-        // Adiciona os eventos mouseleave e mouseenter ao elemento usando addEventListener
-        body.addEventListener('mouseleave', manipuladorMouseLeave);
-        body.addEventListener('mouseenter', manipuladorMouseEnter);
-
-
+        document.addEventListener('mouseleave', () => {
+            cursor.classList.remove('visible');
+        });
+        document.addEventListener('mouseenter', () => {
+            cursor.classList.add('visible');
+        });
 
     </script>
 

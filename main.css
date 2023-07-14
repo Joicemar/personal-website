@@ -115,8 +115,8 @@ body.ligado .my-svg path {
 
 .cursor {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
     background: #eb4a4a;
     border-radius: 50%;
     pointer-events: none;
@@ -124,16 +124,18 @@ body.ligado .my-svg path {
     mix-blend-mode: difference;
     filter: invert(1) grayscale(1) contrast(2);
     z-index: 999;
-    transition: .06s;
+    transition: .03s;
     display: none;
 }
 .cursor.active__js{
+    display: none;
+}
+.cursor.active__js.visible{
     display: initial;
 }
-.container:has(a:hover) ~ .cursor,
+.container:has(a:hover, button:hover) ~ .cursor,
 a:hover ~ .cursor {
-    transform: translate(-50%, -50%) scale(.33);
-    transition: .1s;
+    transform: translate(-50%, -50%);
     /*
     background: #222;
     box-shadow: 0 0 0 100vh #fff;
@@ -145,7 +147,7 @@ a:hover ~ .cursor {
     background-color: #000;
 }
 @media(max-width:850px){
-    .cursor.active__js{
+    .cursor.active__js.visible{
         display: none;
     }
 }
@@ -447,7 +449,7 @@ body .container.nav-container .dark-light a img {
     }
     body .container.nav-container #nav-link li a:hover {
         background-color: #111;
-        color: #e96d6d;
+        color: #eb4a4a;
     }
     body .container.nav-container #nav-link li:nth-child(4) {
         animation-delay: 222ms;
@@ -506,8 +508,9 @@ body .container.nav-container .dark-light a img {
 body .container.header-container {
     overflow-x: hidden;
     width: 100%;
-    height: calc(100vh - 80px);
     height: 100vh;
+    max-height: 900px;
+    min-height: 600px;
     display: flex;
     position: relative;
     align-items: center;
