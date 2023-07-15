@@ -60,9 +60,43 @@ body {
     background-attachment: fixed;
     position: relative;
     overflow-x: hidden;
+    ::selection {
+        background-color: #eb4a4a; /* Altere a cor aqui */
+    }
+}
+body .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
 }
 
-/*dark light trabalhando*/
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Outras regras de estilo para o seu site */
+
 body.ligado {
     background-image: linear-gradient(
             50deg,
@@ -124,30 +158,34 @@ body.ligado .my-svg path {
     mix-blend-mode: difference;
     filter: invert(1) grayscale(1) contrast(2);
     z-index: 999;
-    transition: .03s;
+    transition: 0.1s;
     display: none;
 }
-.cursor.active__js{
+.cursor.active__js {
     display: none;
 }
-.cursor.active__js.visible{
+.cursor.active__js.visible {
     display: initial;
 }
 .container:has(a:hover, button:hover) ~ .cursor,
 a:hover ~ .cursor {
     transform: translate(-50%, -50%);
-    /*
-    background: #222;
-    box-shadow: 0 0 0 100vh #fff;
-    */
 }
-.container:has(p:hover, h1:hover, .about-tittle:hover, 
-.main-text h2:hover, .contact-text h2:hover, h3:hover, address:hover, 
-.about-gri > li:hover) ~ .cursor{
+.container:has(
+        p:hover,
+        h1:hover,
+        .about-tittle:hover,
+        .main-text h2:hover,
+        .contact-text h2:hover,
+        h3:hover,
+        address:hover,
+        .about-gri > li:hover
+    )
+    ~ .cursor {
     background-color: #000;
 }
-@media(max-width:850px){
-    .cursor.active__js.visible{
+@media (max-width: 850px) {
+    .cursor.active__js.visible {
         display: none;
     }
 }
@@ -176,7 +214,7 @@ body .container.nav-container {
     padding-inline: 32px;
     margin-top: 16px;
     z-index: 9;
-    animation: navAnimation forwards 3s ease;
+    animation: navAnimation forwards 2.5s ease;
 }
 
 @media (max-width: 850px) {
@@ -579,7 +617,7 @@ body .container.header-container .socialMedias a i {
     width: 40px;
     border-radius: 0.5rem;
     border-radius: 50%;
-    color: #eb4a4a;
+    color: #ddd;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -621,9 +659,9 @@ body .container.header-container .socialMedias a:hover i {
     z-index: 8;
     width: 40px;
     text-align: center;
-    transform: translateX(-50%) rotate(90deg);
+    transform: translateX(-50%);
     left: 50%;
-    font-size: 25px;
+    font-size:  clamp(33px, 3vw, 42px);
 }
 body .container.header-container .header-left {
     flex: 1;
@@ -649,7 +687,7 @@ body .container.header-container .header-left .blobs {
     display: flex;
     justify-content: flex-end;
     align-items: center !important;
-    margin: auto 10%;
+    margin: auto 5%;
     align-items: end;
 }
 
@@ -658,7 +696,7 @@ body .container.header-container .header-left .blobs {
         filter: contrast(1.3) saturate(0.55) brightness(0.8);
         opacity: 0.8;
         align-items: start !important;
-        padding-top: 26%;
+        padding-top: 13vh;
         transform: none;
         justify-content: center;
         margin: 0;
@@ -1205,7 +1243,7 @@ body .container.contact-container .contact-text .contact-icons a i {
     height: 40px;
     width: 40px;
     border-radius: 0.5rem;
-    color: #eb4a4a;
+    color: #dedede;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1214,7 +1252,6 @@ body .container.contact-container .contact-text .contact-icons a i {
 
 body .container.contact-container .contact-text .contact-icons a:hover i {
     transform: scale(1.2);
-    color: #eb4a4a;
 }
 
 body.ligado .container.contact-container .contact-text .contact-icons a i {
