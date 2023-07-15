@@ -44,6 +44,9 @@
 
 <body class="ligado">
 
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
     <!--......................Start Navbar...................-->
     <nav class="container nav-container">
         <a href="" class="logo" name="logo">
@@ -123,8 +126,8 @@
                 <i class='bx bxl-whatsapp'></i>
             </a>
         </div>
-        <a href="#about" id="downarrow">
-            &#10148;
+        <a href="#about" id="downarrow" class="down">
+            <i class='bx bx-chevrons-down'></i>
         </a>
     </header>
     <!--......................End header...................-->
@@ -330,16 +333,12 @@
         </div>
 
         <div class="contact-form">
-            <form action="https://formsubmit.co/joicemardev@gmail.com" method="POST" id="formulario" onsubmit="">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://joicemar.github.io/personal-website/messageSend.html">
-                <input type="hidden" name="_autoresponse" value="Recebi sua mensagem. Logo responderei.">
-                <input type="hidden" name="_template" value="box">
+            <form name="contact" netlify>
 
                 <input type="text" placeholder="Nome" name="name" required autocomplete="off">
                 <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
                 <textarea placeholder="Mensagem" id="floatingTextarea" name="message"></textarea>
-                <button type="submit" class="send" onclick="send()">
+                <button type="submit" class="send">
                     Enviar
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                         <path fill="#fff" fill-rule="evenodd"
@@ -404,9 +403,7 @@
             </filter>
         </defs>
     </svg>
-    <a href="#" id="return-top" class="top">
-        <div>&#10148;</div>
-    </a>
+    <a href="#" class="top" id="return-top"><i class='bx bx-chevrons-up'></i></a>
     <div class="cursor" id="cursor">
     </div>
 
@@ -417,6 +414,42 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
+        // Remove a classe "loading-overlay" após o carregamento do site
+        window.addEventListener('load', function () {
+            var overlay = document.querySelector('.loading-overlay');
+            overlay.style.display = 'none';
+        });
+
+          //Secondary Cursor
+          var cursor = document.getElementById('cursor');
+        const body = document.querySelector('body');
+        cursor.classList.add('active__js');
+        cursor.classList.add('visible');
+
+        function updateCursorPosition(e) {
+            requestAnimationFrame(function () {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            });
+        }
+
+        document.addEventListener('mousemove', updateCursorPosition);
+        window.addEventListener('scroll', function () {
+            cursor.classList.remove('visible');
+        });
+        window.addEventListener('mousemove', function () {
+            cursor.classList.add('visible');
+        });
+
+        let maxwidth = window.innerWidth;
+
+        document.addEventListener('mouseleave', () => {
+            cursor.classList.remove('visible');
+        });
+        document.addEventListener('mouseenter', () => {
+            cursor.classList.add('visible');
+        });
+
         // Inicializar o ScrollReveal
         const sr = ScrollReveal({
             distance: '50px',
@@ -450,35 +483,7 @@
         }
         window.addEventListener('scroll', teste);
 
-        //Cursor move
-        var cursor = document.getElementById('cursor');
-        const body = document.querySelector('body');
-        cursor.classList.add('active__js');
-        cursor.classList.add('visible');
-
-        function updateCursorPosition(e) {
-            requestAnimationFrame(function () {
-                cursor.style.left = e.pageX + 'px';
-                cursor.style.top = e.pageY + 'px';
-            });
-        }
-
-        document.addEventListener('mousemove', updateCursorPosition);
-        window.addEventListener('scroll', function () {
-            cursor.classList.remove('visible');
-        });
-        window.addEventListener('mousemove', function () {
-            cursor.classList.add('visible');
-        });
-
-        let maxwidth = window.innerWidth;
-
-        document.addEventListener('mouseleave', () => {
-            cursor.classList.remove('visible');
-        });
-        document.addEventListener('mouseenter', () => {
-            cursor.classList.add('visible');
-        });
+      
 
     </script>
 
