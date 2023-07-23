@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="no_js">
 
 <head>
-    <title>👱🏼Joicemar | Portfólio - Front-End</title>
+    <title>🧑Joicemar | Portfólio - Front-End</title>
     <meta name="google-site-verification" content="google48a62be9977c927b.html" />
     <meta charset='utf-8'>
     <meta name="keywords"
         content="front-end, desenvolvimento web, programação, HTML, CSS, JavaScript, UX/UI, responsive design, acessibilidade web, frameworks, bibliotecas, design responsivo, web design, portfólio, desenvolvedor, sites, aplicações web">
-    <meta name="description" content="Meu portfólio de frontend é uma coleção de projetos que refletem minha 
-        paixão e habilidades em criar experiências digitais atraentes e interativas. 
-        Com foco no desenvolvimento web, utilizo tecnologias como HTML, CSS e JavaScript 
-        para dar vida às minhas ideias. Minhas criações vão desde websites responsivos e 
-        intuitivos até aplicativos web dinâmicos. Ao longo do meu portfólio, você 
-        encontrará exemplos de layouts modernos, designs elegantes e uma atenção 
-        meticulosa aos detalhes. Minha abordagem centrada no usuário e meu 
-        conhecimento em boas práticas de UX garantem que cada projeto entregue 
-        uma experiência envolvente e memorável aos usuários. Explore meu portfólio 
-        e descubra como minhas habilidades em frontend podem trazer seus projetos 
-        para o próximo nível.">
     <!--Metas para pré vizialisação-->
     <meta property="og:title" content="Joicemar .S. Morais - Portfólio Front-end Website" />
     <meta property="og:description"
         content="Portfólio | Front-end - Joicemar .S. Morais | 
-    Desenvolvedor Web especializado em HTML, CSS e JavaScript. Veja meus projetos e entre em contato para colaborações e oportunidades." />
-    <meta property="og:image" type="image/webp" content="https://joicemar.github.io/personal-website/img/webp/page.webp"
-        alt="Portfolio" />
+    Desenvolvedor Web especializado em HTML, CSS, JavaScript e Frameworks modernos. Veja meus projetos e entre em contato para colaborações e oportunidades." />
+    <meta property="og:image" type="image/webp" content="https://joicemar.github.io/personal-website/img/webp/page.webp" alt="Portfolio"/>
     <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -44,6 +32,9 @@
 
 <body class="ligado">
 
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
     <!--......................Start Navbar...................-->
     <nav class="container nav-container">
         <a href="" class="logo" name="logo">
@@ -76,6 +67,30 @@
     <!--......................Start header...................-->
     <header id="home" class="container header-container">
         <div class="header-left">
+            <div class="blobs">
+                <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="70%" id="light_blob">
+
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(231, 107, 107);"></stop>
+                            <stop offset="50%" style="stop-color: rgb(255, 157, 157);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(231, 107, 107);"></stop>
+                        </linearGradient>
+                    </defs>
+
+
+                    <path fill="url(#gradient)">
+                        <animate attributeName="d" dur="11000ms" repeatCount="indefinite" values="
+                        M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z;
+                        M408,328.5Q375,407,292,417.5Q209,428,147,378.5Q85,329,87.5,251Q90,173,153,136Q216,99,299,92Q382,85,411.5,167.5Q441,250,408,328.5Z;
+                        M403.5,323.5Q367,397,286,422Q205,447,148.5,386.5Q92,326,86,247Q80,168,145,120.5Q210,73,301,72.5Q392,72,416,161Q440,250,403.5,323.5Z;
+                        M416.5,327Q373,404,289.5,423.5Q206,443,146.5,385.5Q87,328,88,250Q89,172,147.5,113.5Q206,55,286.5,79Q367,103,413.5,176.5Q460,250,416.5,327Z;
+                        M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z
+                        "></animate>
+                    </path>
+                </svg>
+            </div>
             <div class="blobs" id="blob">
                 <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" width="70%" id="blobSvg">
@@ -85,8 +100,8 @@
                                 height="650" />
                         </pattern>
                     </defs>
-                    <path fill="url(#image)" stroke-width="5">
-                        <animate attributeName="d" dur="12000ms" repeatCount="indefinite" values="
+                    <path fill="url(#image)" stroke-width="7">
+                        <animate attributeName="d" dur="11000ms" repeatCount="indefinite" values="
                     M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z;
                     M408,328.5Q375,407,292,417.5Q209,428,147,378.5Q85,329,87.5,251Q90,173,153,136Q216,99,299,92Q382,85,411.5,167.5Q441,250,408,328.5Z;
                     M403.5,323.5Q367,397,286,422Q205,447,148.5,386.5Q92,326,86,247Q80,168,145,120.5Q210,73,301,72.5Q392,72,416,161Q440,250,403.5,323.5Z;
@@ -96,7 +111,9 @@
                     "></animate>
                     </path>
                 </svg>
+
             </div>
+
             <!--Description-->
             <div class="content">
                 <h1>Front-end<br>Developer</h1>
@@ -123,9 +140,9 @@
                 <i class='bx bxl-whatsapp'></i>
             </a>
         </div>
-         <a href="#about" id="downarrow" class="down">
+        <a href="#about" id="downarrow" class="down">
             <i class='bx bx-chevrons-down'></i>
-         </a>
+        </a>
     </header>
     <!--......................End header...................-->
 
@@ -133,12 +150,11 @@
     <section id="about" class="container about-container">
         <h2 class="about-tittle">Sobre Mim</h2>
         <p class="about-description">
-            <strong>Saudações!</strong> Meu nome é <strong>Joicemar da Silva Morais</strong>, sou estudante
-            de graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> e também
-            busco conhecimento de forma <strong>autodidata</strong>. Tenho grande interesse
-            em <strong>UI/UX design</strong> e adoro criar <strong>sites responsivos</strong>. Estou
-            constantemente pesquisando em diversas fontes para me manter <strong>atualizado e melhorar minhas
-                habilidades</strong>.
+            <strong>Saudações!</strong> Meu nome é <strong>Joicemar da Silva Morais</strong>. Trabalho durante o dia e
+            sou estudante de graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> à noite. Além disso,
+            busco conhecimento de forma <strong>autodidata</strong>. Tenho grande interesse em aprender mais sobre
+            <strong>UI/UX design</strong> e adoro criar <strong>sites responsivos</strong>. Estou constantemente
+            pesquisando em diversas fontes para me manter <strong>atualizado e aprimorar minhas habilidades</strong>.
         </p>
         <h3 class="about-resume"><strong>Algumas Tecnologias e Habilidades</strong></h3>
         <div>
@@ -200,6 +216,7 @@
     </section>
     <!--......................End about...................-->
 
+
     <!--.......................Start work.....................-->
     <section id="work" class="container work-container">
 
@@ -225,7 +242,7 @@
                         href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/form%20com%20input%20e%20placeholder%20personalizado">Github🔗</a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row one">
                 <div class="card" id="card2">
                     <picture>
                         <img type="image/webp" src="img/webp/freelancerWebsite.webp" alt="Imagem de um site">
@@ -244,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="row one">
+            <div class="row two">
                 <div class="card" id="card3">
                     <picture>
                         <img type="image/webp" src="img/webp/awax.webp" alt="Imagem de um site">
@@ -252,7 +269,7 @@
                 </div>
                 <div class="main-row">
                     <div class="row-text">
-                        <h6>HTML SASS e Javascript / Trabalhando numa nova versão</h6>
+                        <h6>HTML SCSS e Javascript / Trabalhando numa nova versão</h6>
                     </div>
                 </div>
                 <div class="link">
@@ -262,7 +279,7 @@
                         target="_blank">Github🔗</a>
                 </div>
             </div>
-            <div class="row two">
+            <div class="row three">
                 <div class="card" id="card4">
                     <picture>
                         <img type="image/webp" src="img/webp/projeto3.webp" alt="Imagem de um site">
@@ -281,7 +298,7 @@
                 </div>
             </div>
 
-            <div class="row three">
+            <div class="row">
                 <div class="card" id="card5">
                     <picture>
                         <img type="image/webp" src="img/webp/projeto4.webp" alt="Imagem de um site">
@@ -294,7 +311,24 @@
                 </div>
                 <div class="link">
                     <a rel="external" target="_blank" href="https://guileless-panda-302437.netlify.app#">Demo🔗</a>
-                    <a href="#">Github🔗</a>
+                    <a href="#0">Github🔗</a>
+                </div>
+            </div>
+
+            <div class="row four">
+                <div class="card" id="card6">
+                    <picture>
+                        <img type="image/webp" src="img/projeto_graphic.jpeg" alt="Imagem de um site">
+                    </picture>
+                </div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>HTML, CSS e Javascript</h6>
+                    </div>
+                </div>
+                <div class="link">
+                    <a rel="external" target="_blank" href="https://codepen.io/Joicemar/full/MWzVGeW">Demo🔗</a>
+                    <a href="#0">Github🔗</a>
                 </div>
             </div>
         </div>
@@ -330,16 +364,12 @@
         </div>
 
         <div class="contact-form">
-            <form action="https://formsubmit.co/joicemardev@gmail.com" method="POST" id="formulario" onsubmit="">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://joicemar.github.io/personal-website/messageSend.html">
-                <input type="hidden" name="_autoresponse" value="Recebi sua mensagem. Logo responderei.">
-                <input type="hidden" name="_template" value="box">
+            <form name="contact" netlify>
 
                 <input type="text" placeholder="Nome" name="name" required autocomplete="off">
                 <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
                 <textarea placeholder="Mensagem" id="floatingTextarea" name="message"></textarea>
-                <button type="submit" class="send" onclick="send()">
+                <button type="submit" class="send">
                     Enviar
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                         <path fill="#fff" fill-rule="evenodd"
@@ -354,7 +384,6 @@
     </section>
     <!--.......................End contact.....................-->
 
-    <!--Image effect-->
     <svg style="display: none;">
         <defs>
             <filter id="noise">
@@ -395,90 +424,33 @@
             </filter>
             <filter id="noise5">
                 <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
-                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card4.mouseenter" />
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card5.mouseenter" />
                 </feTurbulence>
                 <feDisplacementMap in="SourceGraphic" in2="static">
                     <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1"
                         begin="card5.mouseenter" />
                 </feDisplacementMap>
             </filter>
+            <filter id="noise6">
+                <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card6.mouseenter" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1"
+                        begin="card6.mouseenter" />
+                </feDisplacementMap>
+            </filter>
         </defs>
     </svg>
-      <a href="#" class="top" id="return-top"><i class='bx bx-chevrons-up'></i></a>
-    <div class="cursor" id="cursor">
-    </div>
+    <a href="#" class="top" id="return-top"><i class='bx bx-chevrons-up'></i></a>
+
+    <div class="cursor" id="cursor"></div>
 
     <footer class="last-text">
         <p>Developed with love by Joicemar S Morais &copy 2023</p>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script>
-        // Inicializar o ScrollReveal
-        const sr = ScrollReveal({
-            distance: '50px',
-            duration: 1500,
-            reset: false
-        })
-        sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .about-description, .about-resume, .main-text, .row', { delay: 150, origin: 'top' })
-        sr.reveal(' .one', { delay: 300, origin: 'top' })
-        sr.reveal(' .two', { delay: 450, origin: 'top' })
-
-        function teste() {
-            var larguraTotal = window.innerHeight;
-            var deslocamentoVertical = window.pageYOffset || document.documentElement.scrollTop;
-            var quantidade_px_para_fazer = larguraTotal - 421;
-            var headerContainer = document.querySelector('.header-container');
-
-            if (deslocamentoVertical > quantidade_px_para_fazer) {
-                var porcentagemRestante = (deslocamentoVertical - quantidade_px_para_fazer) / (larguraTotal - quantidade_px_para_fazer);
-                var opacidade = 1 - porcentagemRestante - (porcentagemRestante / 2);
-                headerContainer.style.opacity = opacidade.toFixed(2);
-
-                /**
-                 * 
-                 containers.forEach(function (container) {
-                });
-                //console.log("Largura: " + larguraTotal + " O que já foi scrollado: " + deslocamentoVertical);
-                */
-            } else {
-                headerContainer.style.opacity = 1;
-            }
-        }
-        window.addEventListener('scroll', teste);
-
-        //Cursor move
-        var cursor = document.getElementById('cursor');
-        const body = document.querySelector('body');
-        cursor.classList.add('active__js');
-        cursor.classList.add('visible');
-
-        function updateCursorPosition(e) {
-            requestAnimationFrame(function () {
-                cursor.style.left = e.pageX + 'px';
-                cursor.style.top = e.pageY + 'px';
-            });
-        }
-
-        document.addEventListener('mousemove', updateCursorPosition);
-        window.addEventListener('scroll', function () {
-            cursor.classList.remove('visible');
-        });
-        window.addEventListener('mousemove', function () {
-            cursor.classList.add('visible');
-        });
-
-        let maxwidth = window.innerWidth;
-
-        document.addEventListener('mouseleave', () => {
-            cursor.classList.remove('visible');
-        });
-        document.addEventListener('mouseenter', () => {
-            cursor.classList.add('visible');
-        });
-
-    </script>
 
     <script src="main.js"></script>
 
