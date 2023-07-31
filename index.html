@@ -2,18 +2,29 @@
 <html lang="pt-br" class="no_js">
 
 <head>
-    <title>🧑Joicemar | Portfólio - Front-End</title>
-    <meta name="google-site-verification" content="google48a62be9977c927b.html" />
+    <title>👱🏼Joicemar | Portfólio - Front-End</title>
+    <meta name="google-site-verification" content="4EifIeitNTgwSLM_B00FI70czb3mrbhWApoR-ObfjfY" />
     <meta charset='utf-8'>
     <meta name="keywords"
         content="front-end, desenvolvimento web, programação, HTML, CSS, JavaScript, UX/UI, responsive design, acessibilidade web, frameworks, bibliotecas, design responsivo, web design, portfólio, desenvolvedor, sites, aplicações web">
+    <meta name="description" content="Meu portfólio de frontend é uma coleção de projetos que refletem minha 
+        paixão e habilidades em criar experiências digitais atraentes e interativas. 
+        Com foco no desenvolvimento web, utilizo tecnologias como HTML, CSS e JavaScript 
+        para dar vida às minhas ideias. Ao longo do meu portfólio, você 
+        encontrará exemplos de layouts modernos, designs elegantes e uma atenção 
+        meticulosa aos detalhes. Minha abordagem centrada no usuário e meu 
+        conhecimento em boas práticas de UX garantem que cada projeto entregue 
+        uma experiência envolvente e memorável aos usuários. Explore meu portfólio 
+        e descubra como minhas habilidades em frontend podem trazer seus projetos 
+        para o próximo nível.">
     <!--Metas para pré vizialisação-->
     <meta property="og:title" content="Joicemar .S. Morais - Portfólio Front-end Website" />
     <meta property="og:description"
         content="Portfólio | Front-end - Joicemar .S. Morais | 
-    Desenvolvedor Web especializado em HTML, CSS, JavaScript e Frameworks modernos. Veja meus projetos e entre em contato para colaborações e oportunidades." />
-    <meta property="og:image" type="image/webp" content="https://joicemar.github.io/personal-website/img/webp/page.webp" alt="Portfolio"/>
-    <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
+    Desenvolvedor Web especializado em HTML, CSS e JavaScript. Veja meus projetos e entre em contato para colaborações e oportunidades." />
+    <meta property="og:image" type="image/webp" content="https://joicemar.github.io/personal-website/img/webp/page.webp"
+        alt="Portfolio" />
+    <meta property="og:url" content="https://joicemardev.netlify.app" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="author" content="Portfólio | Joicemar .S. Morais">
@@ -30,10 +41,13 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
-<body class="ligado">
+<body class="body ligado">
 
     <div class="loading-overlay">
-        <div class="loading-spinner"></div>
+        <!--
+            <div class="loading-spinner"></div>
+        -->
+        <img src="assets/load.svg" alt="relógio">
     </div>
     <!--......................Start Navbar...................-->
     <nav class="container nav-container">
@@ -41,89 +55,89 @@
             Portfólio.
         </a>
         <ul class="nav-link" id="nav-link">
-            <li><a href="#home" class="inicio" name="inicio">Início</a>
+            <li><a href="#home" class="inicio scroll" name="inicio">Início</a>
                 <div></div>
             </li>
-            <li><a href="#about" class="sobre" name="sobre">Sobre</a>
+            <li><a href="#about" class="sobre scroll" name="sobre">Sobre</a>
                 <div></div>
             </li>
-            <li><a href="#work" class="portfolio" name="portfolio">Portfólio</a>
+            <li><a href="#work" class="portfolio scroll" name="portfolio">Portfólio</a>
                 <div></div>
             </li>
-            <li><a href="#contact" class="contato" name="contato">Contato</a>
+            <li><a href="#contact" class="contato scroll" name="contato">Contato</a>
                 <div></div>
             </li>
         </ul>
         <div id="dark-light" class="dark-light">
-            <a><img href="dark-light" src="assets/moon.svg" alt=""></a>
             <a><img href="#" src="assets/sun.svg" alt=""></a>
+            <a><img href="dark-light" src="assets/moon.svg" alt=""></a>
         </div>
         <div id="toggle" class="toggle">
             <span></span>
         </div>
+
     </nav>
     <!--......................End Navbar...................-->
 
     <!--......................Start header...................-->
     <header id="home" class="container header-container">
         <div class="header-left">
-            <div class="blobs">
-                <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" width="70%" id="light_blob">
-
-                    <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color: rgb(231, 107, 107);"></stop>
-                            <stop offset="50%" style="stop-color: rgb(255, 157, 157);"></stop>
-                            <stop offset="100%" style="stop-color: rgb(231, 107, 107);"></stop>
-                        </linearGradient>
-                    </defs>
-
-
-                    <path fill="url(#gradient)">
-                        <animate attributeName="d" dur="11000ms" repeatCount="indefinite" values="
+            <!--Description-->
+            <div class="content">
+                <h1>Cre<span>ative</span><br>Front<span>-end</span></h1>
+                <h2 id="welcome"><span>Olá!</span> <br> Sou o <span><big>J</big></span>oicemar .S. Morais</h2>
+                <div class="btn">
+                    <a href="#contact" class="scroll" id="faleComigo">Diga Oi <img src="assets/talk.svg"
+                            alt="balão de texto"></a>
+                </div>
+            </div>
+            <div class="blobs_container">
+                <div class="blobs">
+                    <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="70%" id="light_blob">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="80%" y2="80%">
+                                <stop offset="50%" style="stop-color: rgb(209, 114, 114);"></stop>
+                                <stop offset="100%" style="stop-color: rgb(162, 128, 182);"></stop>
+                                <animate attributeName="stop-color" values="rgb(162, 128, 182); rgb(236, 98, 98);;"
+                                    dur="12s" repeatCount="indefinite" />
+                            </linearGradient>
+                        </defs>
+                        <rect fill="url(#gradient)" />
+                        <path fill="url(#gradient)">
+                            <animate attributeName="d" dur="12000ms" repeatCount="indefinite" values="
                         M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z;
                         M408,328.5Q375,407,292,417.5Q209,428,147,378.5Q85,329,87.5,251Q90,173,153,136Q216,99,299,92Q382,85,411.5,167.5Q441,250,408,328.5Z;
                         M403.5,323.5Q367,397,286,422Q205,447,148.5,386.5Q92,326,86,247Q80,168,145,120.5Q210,73,301,72.5Q392,72,416,161Q440,250,403.5,323.5Z;
                         M416.5,327Q373,404,289.5,423.5Q206,443,146.5,385.5Q87,328,88,250Q89,172,147.5,113.5Q206,55,286.5,79Q367,103,413.5,176.5Q460,250,416.5,327Z;
                         M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z
                         "></animate>
-                    </path>
-                </svg>
-            </div>
-            <div class="blobs" id="blob">
-                <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" width="70%" id="blobSvg">
-                    <defs>
-                        <pattern id="image" patternUnits="userSpaceOnUse" width="500" height="500">
-                            <image id="me" class="blob-image" xlink:href="img/webp/mebg.webp" width="550"
-                                height="650" />
-                        </pattern>
-                    </defs>
-                    <path fill="url(#image)" stroke-width="7">
-                        <animate attributeName="d" dur="11000ms" repeatCount="indefinite" values="
+                        </path>
+                    </svg>
+                </div>
+                <div class="blobs" id="blob" onmouseenter="changeImage()">
+                    <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                        <defs>
+                            <pattern id="image" patternUnits="userSpaceOnUse" width="500" height="500">
+                                <image id="me" class="blob-image" xlink:href="img/foto2.png" width="500" height="500" />
+                            </pattern>
+                        </defs>
+                        <path fill="url(#image)" stroke-width="1" id="path">
+                            <animate attributeName="d" dur="12000ms" repeatCount="indefinite" values="
                     M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z;
                     M408,328.5Q375,407,292,417.5Q209,428,147,378.5Q85,329,87.5,251Q90,173,153,136Q216,99,299,92Q382,85,411.5,167.5Q441,250,408,328.5Z;
                     M403.5,323.5Q367,397,286,422Q205,447,148.5,386.5Q92,326,86,247Q80,168,145,120.5Q210,73,301,72.5Q392,72,416,161Q440,250,403.5,323.5Z;
                     M416.5,327Q373,404,289.5,423.5Q206,443,146.5,385.5Q87,328,88,250Q89,172,147.5,113.5Q206,55,286.5,79Q367,103,413.5,176.5Q460,250,416.5,327Z;
                     M408.5,328Q375,406,288,436Q201,466,153,393Q105,320,100,247.5Q95,175,153,126.5Q211,78,297,80.5Q383,83,412.5,166.5Q442,250,408.5,328Z
-                    
+                
                     "></animate>
-                    </path>
-                </svg>
-
-            </div>
-
-            <!--Description-->
-            <div class="content">
-                <h1>Front-end<br>Developer</h1>
-                <h2 id="welcome"><span>Olá!</span> <br> Sou o <span><big>J</big></span>oicemar .S. Morais</h2>
-                <div class="btn">
-                    <a href="#contact" id="faleComigo">Fale Comigo <img src="assets/talk.svg" alt="balão de texto"></a>
+                        </path>
+                    </svg>
                 </div>
             </div>
-
         </div>
+
         <div class="socialMedias">
             <h5>Me Encontre</h5>
             <a href="https://github.com/Joicemar" target="_blank" rel="external" class="magnetic">
@@ -140,7 +154,7 @@
                 <i class='bx bxl-whatsapp'></i>
             </a>
         </div>
-        <a href="#about" id="downarrow" class="down">
+        <a href="#about" id="downarrow" class="down scroll">
             <i class='bx bx-chevrons-down'></i>
         </a>
     </header>
@@ -150,11 +164,13 @@
     <section id="about" class="container about-container">
         <h2 class="about-tittle">Sobre Mim</h2>
         <p class="about-description">
-            <strong>Saudações!</strong> Meu nome é <strong>Joicemar da Silva Morais</strong>. Trabalho durante o dia e
-            sou estudante de graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> à noite. Além disso,
-            busco conhecimento de forma <strong>autodidata</strong>. Tenho grande interesse em aprender mais sobre
-            <strong>UI/UX design</strong> e adoro criar <strong>sites responsivos</strong>. Estou constantemente
-            pesquisando em diversas fontes para me manter <strong>atualizado e aprimorar minhas habilidades</strong>.
+            <strong>Saudações!</strong> Meu nome é <strong>Joicemar da Silva Morais</strong>.
+            Sou estudante de graduação em <strong>Análise e Desenvolvimento de Sistemas</strong>. Além disso,
+            busco conhecimento de forma <strong>autodidata</strong>. Adoro criar <strong>sites responsivos</strong>
+            com <strong>HTML, CSS e JavaScript</strong>.
+            Estou constantemente pesquisando em diversas fontes para me manter
+            <strong>atualizado e aprimorar minhas habilidades</strong>. <br>
+            ("No momento estou aperfeiçoando mais o Javascript para depois cair de cabeça em projetos criativos.")
         </p>
         <h3 class="about-resume"><strong>Algumas Tecnologias e Habilidades</strong></h3>
         <div>
@@ -225,23 +241,7 @@
             <h4>Um pouco do meu trabalho</h4>
         </div>
         <div class="portfolio-content">
-            <div class="row">
-                <div class="card" id="card">
-                    <picture>
-                        <img type="image/webp" src="img/webp/formulario.webp" alt="Imagem de um formulario">
-                    </picture>
-                </div>
-                <div class="main-row">
-                    <div class="row-text">
-                        <h6>HTML e CSS </h6>
-                    </div>
-                </div>
-                <div class="link">
-                    <a target="_blank" rel="external" href="https://chic-cheesecake-3dd2ff.netlify.app">Demo🔗</a>
-                    <a target="_blank" rel="external"
-                        href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/form%20com%20input%20e%20placeholder%20personalizado">Github🔗</a>
-                </div>
-            </div>
+
             <div class="row one">
                 <div class="card" id="card2">
                     <picture>
@@ -279,6 +279,7 @@
                         target="_blank">Github🔗</a>
                 </div>
             </div>
+
             <div class="row three">
                 <div class="card" id="card4">
                     <picture>
@@ -298,23 +299,6 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="card" id="card5">
-                    <picture>
-                        <img type="image/webp" src="img/webp/projeto4.webp" alt="Imagem de um site">
-                    </picture>
-                </div>
-                <div class="main-row">
-                    <div class="row-text">
-                        <h6>HTML, CSS e Javascript / Trabalhando numa nova versão</h6>
-                    </div>
-                </div>
-                <div class="link">
-                    <a rel="external" target="_blank" href="https://guileless-panda-302437.netlify.app#">Demo🔗</a>
-                    <a href="#0">Github🔗</a>
-                </div>
-            </div>
-
             <div class="row four">
                 <div class="card" id="card6">
                     <picture>
@@ -331,6 +315,76 @@
                     <a href="#0">Github🔗</a>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="card" id="card">
+                    <picture>
+                        <img type="image/webp" src="img/webp/formulario.webp" alt="Imagem de um formulario">
+                    </picture>
+                </div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>HTML e CSS </h6>
+                    </div>
+                </div>
+                <div class="link">
+                    <a target="_blank" rel="external" href="https://chic-cheesecake-3dd2ff.netlify.app">Demo🔗</a>
+                    <a target="_blank" rel="external"
+                        href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/form%20com%20input%20e%20placeholder%20personalizado">Github🔗</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card" id="card5">
+                    <picture>
+                        <img type="image/webp" src="img/webp/projeto4.webp" alt="Imagem de um site">
+                    </picture>
+                </div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>HTML, CSS e Javascript / Trabalhando numa nova versão</h6>
+                    </div>
+                </div>
+                <div class="link">
+                    <a rel="external" target="_blank" href="https://guileless-panda-302437.netlify.app#">Demo🔗</a>
+                    <a href="#0">Github🔗</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card" id="card7">
+                    <picture>
+                        <img type="image/webp" src="img/desafio_page.jpg" alt="Imagem de um site">
+                    </picture>
+                </div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>HTML, CSS e Javascript</h6>
+                    </div>
+                </div>
+                <div class="link">
+                    <a rel="external" target="_blank"
+                        href="https://transcendent-bublanina-d1cef5.netlify.app">Demo🔗</a>
+                    <a
+                        href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/Desafio%20coming%20soon%20page">Github🔗</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card" id="card8">
+                    <picture>
+                        <img type="image/webp" src="img/desafio_estagiarios.jpg" alt="Imagem de um site">
+                    </picture>
+                </div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>HTML, CSS e Javascript</h6>
+                    </div>
+                </div>
+                <div class="link">
+                    <a rel="external" target="_blank" href="https://spectacular-gnome-fa4775.netlify.app">Demo🔗</a>
+                    <a href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/projeto_estagio">Github🔗</a>
+                </div>
+            </div>
+
         </div>
     </section>
     <!--.......................End work.....................-->
@@ -364,11 +418,11 @@
         </div>
 
         <div class="contact-form">
-            <form name="contact" netlify>
+            <form name="contact" netlify action="/messageSend">
 
                 <input type="text" placeholder="Nome" name="name" required autocomplete="off">
                 <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
-                <textarea placeholder="Mensagem" id="floatingTextarea" name="message"></textarea>
+                <textarea placeholder="Mensagem" id="floatingTextarea" name="message" required></textarea>
                 <button type="submit" class="send">
                     Enviar
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -440,19 +494,47 @@
                         begin="card6.mouseenter" />
                 </feDisplacementMap>
             </filter>
+            <filter id="noise7">
+                <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card7.mouseenter" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1"
+                        begin="card7.mouseenter" />
+                </feDisplacementMap>
+            </filter>
+            <filter id="noise8">
+                <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card8.mouseenter" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1"
+                        begin="card8.mouseenter" />
+                </feDisplacementMap>
+            </filter>
+            <filter id="turbulence">
+                <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1" />
+                </feDisplacementMap>
+            </filter>
         </defs>
     </svg>
-    <a href="#" class="top" id="return-top"><i class='bx bx-chevrons-up'></i></a>
+    <a href="#home" class="top scroll" id="return-top"><i class='bx bx-chevrons-up'></i></a>
 
     <div class="cursor" id="cursor"></div>
 
     <footer class="last-text">
-        <p>Developed with love by Joicemar S Morais &copy 2023</p>
+        <p>&copy Developed with love by Joicemar S Morais 2023</p>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="main.js"></script>
+
+    <script src="SmoothScrolling.js"></script>
 
 </body>
 

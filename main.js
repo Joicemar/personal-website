@@ -1,7 +1,5 @@
 
 
-
-
 let doc = document.querySelector('html');
 doc.classList.remove('no_js');
 doc.classList.add('active_js');
@@ -37,10 +35,9 @@ function handleScroll() {
     requestAnimationFrame(() => {
         if (scrollTop + 100 >= windowHeight && maxWidth > 850) {
             nav.classList.add('fixed', 'js');
-            nav.style.marginTop = `${scrollTop}px`;
+            //nav.style.marginTop = `${scrollTop}px`;
         } else {
             nav.classList.remove('fixed');
-            nav.style.marginTop = '16px';
         }
     });
 }
@@ -90,7 +87,7 @@ document.getElementById('toggle').onclick = () => {
  * Dark Light 
  */
 let darkLight = document.getElementById('dark-light');
-let changeTheme = document.querySelector('.ligado');
+let changeTheme = document.querySelector('.body');
 darkLight.onclick = () => {
     darkLight.classList.toggle('active');
 
@@ -166,9 +163,9 @@ document.addEventListener('mouseenter', () => {
 
 // Inicializar o ScrollReveal
 const sr = ScrollReveal({
-    distance: '100px',
-    duration: 1300,
-    reset: true
+    distance: '70px',
+    duration: 1500,
+    reset: false
 })
 sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .about-description, .about-resume, .main-text', { delay: 50, origin: 'top' })
 sr.reveal(' .row', { delay: 50, origin: 'bottom' })
