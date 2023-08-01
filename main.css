@@ -642,11 +642,17 @@ body .container.header-container .socialMedias a i {
 body.ligado .container.header-container .socialMedias a i {
     color: #000;
 }
-
 @media (max-width: 600px) {
     body .container.header-container .socialMedias a i {
         font-size: 18pt;
     }
+}
+.socialMedias h4{
+    color: #fff;
+    font-size: clamp(2.5rem, 6vw, 3rem);
+}
+body.ligado .socialMedias h4{
+    color: #000;
 }
 body .container.header-container .socialMedias a:hover {
     transform: scale(1.15);
