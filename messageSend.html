@@ -11,18 +11,23 @@
     <meta name="author" content="Joicemar .S. Morais">
     <title>✌️Mensagem Enviada</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Noto+Sans:wght@100;200;300;400;500&family=Poppins:wght@200;300;400&display=swap');
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            font-family: 'Genos', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Noto Sans', sans-serif;
             list-style: none;
             text-decoration: none;
             scroll-behavior: smooth;
-            /*uma animação suave ao rolar para as âncoras */
+        }
+
+        :root {
+            --green_black: rgb(14, 30, 37);
         }
 
         body {
@@ -33,52 +38,79 @@
             justify-items: center;
             height: 100vh;
             gap: 30px;
-            background: #151515;
+            background: var(--green_black);
+        }
+
+        ul {
+            background-color: #ddd;
+            width: 320px;
+            width: clamp(300px, 90vw, 550px);
+            height: 270px;
+            padding: 40px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
         }
 
         span {
-            font-size: 5vw;
-            font-weight: 600;
-            color: #eee;
+            font-size: 1.1rem;
+            font-size: clamp(.7rem, 3vw, 1.3rem);
+            font-weight: 500;
+            color: #111111;
         }
 
-        button {
-            background-color: #111;
-            border: 2px solid #eee;
-            transition: .5s;
-            border-radius: 0.2rem;
-        }
-
-        a {
+        ul a {
             text-decoration: none;
-            font-size: 22pt;
-            color: #eee;
+            font-size: 1.1rem;
+            font-size: clamp(.7rem, 3vw, 1.3rem);
+            color: rgb(0, 168, 168);
             transition: .5s;
-            font-size: 17px;
             font-weight: 700;
-            text-transform: uppercase;
             letter-spacing: 3px;
             word-spacing: 4px;
             transition: all .2s ease;
-            transform: scale(1.1, .8);
             display: inline-block;
-            padding: 10px 200px;
         }
-
-        button:hover {
-            background-color: #eee;
+        div{
+            width: 180px;
+            position: absolute;
+            top: -80px;
+            right: 35%;
+            transform: translateX(50%) rotate(25deg);
+            animation: animate .7s infinite alternate ease-in-out;
         }
-
-        button:hover>a {
-            color: #111;
+        img{
+            width: 100%;
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(3deg) translateY(10px) translateX(50%);
+            }100%{
+                transform: rotate(6deg) translateY(0px) translateX(50%);
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <span>Sua mensagem foi enviada!</span>
-    <button><a href="index.html">Voltar</a></button>
+    <ul>
+        <div>
+            <img src="assets/safe-mail.png" alt="carta de correio">
+        </div>
+        <li>
+            <h1>Obrigado!</h1>
+        </li>
+        <li>
+            <span>Sua mensagem foi enviada com sucesso.</span>
+        </li>
+        <li>
+            <a href="index.html">🠤 Voltar ao site</a>
+        </li>
+       
+    </ul>
 </body>
 
 </html>

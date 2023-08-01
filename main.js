@@ -163,15 +163,15 @@ document.addEventListener('mouseenter', () => {
 
 // Inicializar o ScrollReveal
 const sr = ScrollReveal({
-    distance: '70px',
+    distance: '50px',
     duration: 1500,
     reset: false
 })
-sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .about-description, .about-resume, .main-text', { delay: 50, origin: 'top' })
-sr.reveal(' .row', { delay: 50, origin: 'bottom' })
-sr.reveal(' .one', { delay: 50, origin: 'top' })
-sr.reveal(' .two', { delay: 50, origin: 'top' })
-sr.reveal(' .three', { delay: 50, origin: 'top' })
+sr.reveal('#contact,about-tittle, .about-tittle, .about, .about-gri, .about-description, .about-resume, .main-text', { delay: 150, origin: 'top' })
+sr.reveal(' .row', { delay: 150, origin: 'bottom' })
+sr.reveal(' .one', { delay: 150, origin: 'top' })
+sr.reveal(' .two', { delay: 150, origin: 'top' })
+sr.reveal(' .three', { delay: 150, origin: 'top' })
 /**
  * Imagem Animation; elemento Imagem acompanhar um pouco a rolagem
  
