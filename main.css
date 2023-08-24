@@ -697,6 +697,7 @@ body .container.header-container .header-left .blobs_container {
     align-items: center !important;
     margin: auto 5%;
     align-items: end;
+    z-index: -1;
 }
 .blob-image {
     transition: 2s ease-in-out;
@@ -981,7 +982,6 @@ body .container.about-container {
     justify-content: start;
     align-items: center;
     gap: 32px;
-    padding-block: 80px;
     color: #fff;
     max-width: 1400px;
 }
@@ -1104,7 +1104,7 @@ body.ligado .container.about-container div .about-gri li::before {
 @media (max-width: 850px) {
     body .container.about-container {
         padding-inline: 20px;
-        padding-top: 0;
+        padding-block: 80px;
     }
 }
 /*----------------------------End About Container-------------------------------*/
