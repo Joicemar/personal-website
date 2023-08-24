@@ -1,8 +1,4 @@
 
-
-let doc = document.querySelector('html');
-doc.classList.remove('no_js');
-doc.classList.add('active_js');
 /**
  * Botao de retornar
  */
