@@ -16,14 +16,16 @@
     <meta property="og:description"
         content="Portfólio | Front-end - Joicemar .S. Morais | 
     Desenvolvedor Web especializado em HTML, CSS e JavaScript. Veja meus projetos e entre em contato para colaborações e oportunidades." />
-    <meta property="og:image" type="image/jpg" content="https://joicemar.github.io/personal-website/img/page.jpg" alt="Portfolio" />
-    <meta property="og:url" content="https://joicemardev.netlify.app" />
+    <meta property="og:image" type="image/jpg" content="https://joicemar.github.io/personal-website/img/page.jpg"
+        alt="Portfolio" />
+    <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="author" content="Portfólio | Joicemar .S. Morais">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+    <link rel="canonical" href="https://joicemardev.netlify.app">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +38,7 @@
 
 <body class="body ligado">
 
-    <div class="loading-overlay">
+    <div class="loading-overlay" aria-hidden="true">
         <!--
             <div class="loading-spinner"></div>
         -->
@@ -92,7 +94,7 @@
                             <linearGradient id="gradient" x1="0%" y1="0%" x2="80%" y2="80%">
                                 <stop offset="50%" style="stop-color: rgb(209, 114, 114);"></stop>
                                 <stop offset="100%" style="stop-color: rgb(162, 128, 182);"></stop>
-                                <animate attributeName="stop-color" values="rgb(162, 128, 182); rgb(236, 98, 98);;"
+                                <animate attributeName="stop-color" values="rgb(162, 128, 182); rgb(236, 98, 98);"
                                     dur="12s" repeatCount="indefinite" />
                             </linearGradient>
                         </defs>
@@ -108,7 +110,7 @@
                         </path>
                     </svg>
                 </div>
-                <div class="blobs" id="blob" onmouseenter="changeImage()">
+                <div class="blobs" id="blob">
                     <svg class="my-svg" viewBox="1 1 500 500" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                         <defs>
@@ -162,8 +164,7 @@
             busco conhecimento de forma <strong>autodidata</strong>. Adoro criar <strong>sites responsivos</strong>
             com <strong>HTML, CSS e JavaScript</strong>.
             Estou constantemente pesquisando em diversas fontes para me manter
-            <strong>atualizado e aprimorar minhas habilidades</strong>. <br>
-            ("No momento estou aperfeiçoando mais o Javascript para depois cair de cabeça em projetos criativos.")
+            <strong>atualizado e aprimorar minhas habilidades</strong>.
         </p>
         <h3 class="about-resume"><strong>Algumas Tecnologias e Habilidades</strong></h3>
         <div>
@@ -426,12 +427,12 @@
                 </button>
             </form>
 
-            <span id="span" style="opacity: 0;">.</span>
+            <span id="span" style="opacity: 0;" aria-hidden="true">.</span>
         </div>
     </section>
     <!--.......................End contact.....................-->
 
-    <svg style="display: none;">
+    <svg style="display: none;" aria-hidden="true">
         <defs>
             <filter id="noise">
                 <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
@@ -528,6 +529,21 @@
     <script src="main.js"></script>
 
     <script src="SmoothScrolling.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        let doc = document.querySelector('html');
+        doc.classList.remove('no_js');
+        doc.classList.add('active_js');
+    </script>
 
 </body>
 
