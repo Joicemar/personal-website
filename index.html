@@ -7,15 +7,12 @@
     <meta charset='utf-8'>
     <meta name="keywords"
         content="front-end, desenvolvimento web, programação, HTML, CSS, JavaScript, UX/UI, responsive design, acessibilidade web, criatividade, bibliotecas, design responsivo, web design, portfólio, desenvolvedor, sites, aplicações web">
-    <meta name="description" content="Estudante e estagiário de desenvolvimento web com foco em HTML, 
-    CSS e JavaScript. Tenho paixão por criar sites bonitos e funcionais, e estou sempre procurando novas
-    maneiras de aprender e melhorar minhas habilidades. Estou procurando uma oportunidade de aplicar
-    minhas habilidades e conhecimentos em um ambiente profissional.">
+    <meta name="description" content="Sites com excelência e perfeição é uma arte moderna.">
     <!--Metas para pré vizialisação-->
     <meta property="og:title" content="Joicemar .S. Morais - Portfólio Front-end Website" />
     <meta property="og:description"
         content="Portfólio | Front-end - Joicemar .S. Morais | 
-    Desenvolvedor Web especializado em HTML, CSS e JavaScript. Veja meus projetos e entre em contato para colaborações e oportunidades." />
+        Desenvolvedor Web especializado em HTML, CSS e JavaScript. Veja meus projetos e entre em contato para colaborações e oportunidades." />
     <meta property="og:image" type="image/jpg" content="https://joicemar.github.io/personal-website/img/page.jpg"
         alt="Portfolio" />
     <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
@@ -25,7 +22,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <link rel="canonical" href="https://joicemardev.netlify.app">
+    <link rel="canonical" href="https://joicemar.github.io/personal-website/">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +33,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
-<body class="body ligado">
+<body class="body ligado" id="body">
 
     <div class="loading-overlay" aria-hidden="true">
         <!--
@@ -45,7 +42,7 @@
         <img src="assets/load.svg" alt="relógio">
     </div>
     <!--......................Start Navbar...................-->
-    <nav class="container nav-container">
+    <nav class="container nav-container" id="nav">
         <a href="" class="logo" name="logo">
             Portfólio.
         </a>
@@ -412,7 +409,7 @@
         </div>
 
         <div class="contact-form">
-            <form name="contact" netlify action="/messageSend">
+            <form name="contact" netlify>
 
                 <input type="text" placeholder="Nome" name="name" required autocomplete="off">
                 <input type="email" placeholder="Email" id="email" name="email" required autocomplete="off">
@@ -518,31 +515,23 @@
     </svg>
     <a href="#home" class="top scroll" id="return-top"><i class='bx bx-chevrons-up'></i></a>
 
-    <div class="cursor" id="cursor"></div>
+    <div class="cursor" id="cursor" aria-hidden="true">
+        <div class="cursor child"></div>
+    </div>
 
     <footer class="last-text">
         <p>&copy Developed with love by Joicemar S Morais 2023</p>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 
     <script src="main.js"></script>
 
     <script src="SmoothScrolling.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script>
-        const lenis = new Lenis()
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-        requestAnimationFrame(raf)
-
-        let doc = document.querySelector('html');
-        doc.classList.remove('no_js');
-        doc.classList.add('active_js');
+        document.querySelector('html').classList.replace('no_js', 'active_js');
     </script>
 
 </body>
