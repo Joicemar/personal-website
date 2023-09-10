@@ -1438,6 +1438,7 @@ body.ligado .container.contact-container .contact-text .contact-icons a i {
 
 body .container.contact-container .contact-form form {
     position: relative;
+    display: none;
 }
 
 body .container.contact-container .contact-form form input,
