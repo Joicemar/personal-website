@@ -1216,9 +1216,6 @@ body.ligado .container.header-container .header-left .content .btn a:hover {
     body .container.header-container .header-left .content #welcome {
         left: -5px;
     }
-    body .container.header-container .header-left .content {
-        justify-content: end;
-    }
     body .container.header-container .header-left .content .btn a {
         margin: 0;
     }
