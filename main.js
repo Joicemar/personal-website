@@ -18,7 +18,7 @@ function returnTop() {
     var maxWidth = window.innerWidth || document.documentElement.clientWidth;//largura da janela atual 
     var scrollTop = window.pageYOffset || window.screenY || document.documentElement.scrollTop;//posição vertical de rolagem
 
-    if (scrollTop + 500 >= windowHeight) {
+    if (scrollTop + 300 >= windowHeight) {
         returntop.classList.add("js");
     } else {
         returntop.classList.remove("js");
@@ -150,10 +150,9 @@ window.addEventListener('load', () => {
     let nav = document.getElementById('nav');
     header.style.display = 'none';
     nav.style.display = 'none';
-    setTimeout(() =>{ overlay.style.display = 'none';
+    overlay.style.display = 'none';
     header.style.display = 'flex';
     nav.style.display = 'flex';
-}, 600);
 });
 
 
