@@ -767,7 +767,7 @@ body .container.header-container .header-left .photo_container {
     top: 0;
     width: 50vw;
     height: 100vh;
-    animation: identifier 1s ease-in-out;
+    animation: identifier 2s ease-in-out;
     z-index: -1;
 }
 .my-svg {
