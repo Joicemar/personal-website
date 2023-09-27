@@ -1046,12 +1046,12 @@ body .container.header-container .header-left .content h1 {
 @keyframes revelar {
     0% {
         clip-path: inset(0 0 100% 0);
-        top: 80px;
+        top: 8vw;
         transform: skew(40deg);
     }
     100% {
         opacity: 1;
-        top: 0px;
+        top: 0;
         clip-path: inset(0 0 -32px 0);
     }
 }
