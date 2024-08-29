@@ -782,22 +782,12 @@ body .container.header-container .header-left .photo_container {
     margin: auto 5%;
     align-items: end;
     z-index: -1; 
-    filter: contrast(1.1) saturate(1) brightness(0.9) sepia(10%);
-    animation:
-    distorcion3 4s infinite;
-    animation-delay: 1000ms;
-    -webkit-animation-delay: 1000ms;
-    -moz-animation-delay: 1000ms;
+    filter: contrast(1.1) saturate(0) brightness(0.9) sepia(10%);
 }
 @media (max-width: 850px) {
     .my-svg{
         all: unset;
         filter: contrast(1.1) saturate(1) brightness(0.9) sepia(10%);
-        animation:
-        distorcion3 4s infinite;
-        animation-delay: 1000ms;
-        -webkit-animation-delay: 1000ms;
-        -moz-animation-delay: 1000ms;
     }
 }
 
@@ -878,7 +868,6 @@ body .container.header-container .header-left .blobs svg {
 
 body .container.header-container .header-left .blobs svg #me {
     width: 100%;
-    animation: distorcion 4s infinite, distorcion 4s infinite reverse;
 }
 
 body .container.header-container .header-left .content {
@@ -952,8 +941,7 @@ body .container.header-container .header-left .content h1 {
     order: 2;
     text-align: start;
     animation:
-    revelar 1.5s ease forwards,
-    distorcion 5s infinite alternate-reverse;
+    revelar 1.5s ease forwards;
     position: relative;
     opacity: 0;
     animation-delay: 1000ms;
