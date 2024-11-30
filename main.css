@@ -669,14 +669,6 @@ body .container.header-container {
     animation: identifier 1s ease;
     z-index: 3;
 }
-.line{
-    background-color: var(--h2_gray);
-    width: 2px;
-    height: 46vh;
-    position: absolute;
-    top: 85vh;
-    right:calc(3% + 20px);
-}
 
 body .container.header-container .socialMedias h5 {
     display: block;
