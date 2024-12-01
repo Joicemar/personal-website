@@ -54,7 +54,7 @@ button {
     --main-color: rgb(220, 20, 20);
     --main-color: rgb(235, 74, 74);
     --text_red: #b86262;
-    --h2_gray: #616161;
+    --h2_gray: #323232;
     --second-color: gray;
     --other-color: #12141c;
     --h1-font: 5.2rem;
@@ -1397,6 +1397,9 @@ body .container.work-container .main-text {
     letter-spacing: -2px;
     color: var(--h2_gray);
 }
+.desligado .main-text h2{
+    color: #e4e4e4;
+}
 
 /*
 h4 {
@@ -1599,7 +1602,9 @@ body .container.contact-container {
     left: -40px;
     z-index: -1;
 }
-
+.desligado h2{
+    color: #b9b9b9;
+}
 body .container.contact-container .contact-text h4 {
     margin: 15px 0;
     color: var(--main-color);
@@ -1750,15 +1755,15 @@ body .container.contact-container .contact-form form .send {
     background-color: #eb4a4a;
     color: #fff;
 }
-body .container.contact-container .contact-form form .send > svg {
+.contact-form form .send > svg {
     width: 20px;
     left: 10px;
     position: relative;
 }
-body .container.contact-container .contact-form form .send:hover {
+.contact-form form .send:hover {
     color: #ddd;
 }
-body .container.contact-container .contact-form form .send:not(:hover) {
+.contact-form form .send:not(:hover) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1833,7 +1838,6 @@ body .top {
     border-radius: 4px;
     background-color: #eb4a4a;
     background-color: #ccc;
-    mix-blend-mode: exclusion;
     border-radius: 4px;
     display: flex;
     justify-content: center;
@@ -1849,13 +1853,12 @@ body .top {
     left: 2px;
     bottom: 3px;
 }
-/*
+
 body.ligado .top {
     color: #fff;
     background-color: #333;
     border-color: #333;
 }
-*/
 
 @media (max-width: 500px) {
     body .top {
