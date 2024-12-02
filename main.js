@@ -58,7 +58,7 @@ function handleBoxMovement(e) {
     const moveY = y - boxHeight / 2;
 
     requestAnimationFrame(() => {
-        this.style.transition = '.11s ease';
+        this.style.transition = '.10s ease';
         this.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
 }

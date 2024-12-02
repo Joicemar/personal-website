@@ -25,7 +25,9 @@ h3,
 h4,
 h5,
 h6,
+div,
 button {
+    max-width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -71,6 +73,9 @@ button {
 html {
     scroll-behavior: smooth;
 }
+html, body{
+    overflow-x: hidden;
+}
 html.active_js {
     scroll-behavior: initial; /*ativado scroll suave via javascript*/
 }
@@ -82,7 +87,7 @@ html.active_js {
 br,
 span,
 big,
-smal,
+small,
 h2,
 h1 {
     line-height: 0;
@@ -1232,6 +1237,7 @@ body.ligado .container.header-container .header-left .content .btn a:hover {
     color: var(--h2_gray);
     position: relative;
     left: 40px;
+    width: 100%;
 }
 
 .about-container h2::before{
@@ -1242,6 +1248,7 @@ body.ligado .container.header-container .header-left .content .btn a:hover {
     position: absolute;
     left: -40px;
     z-index: -1;
+    width: 100%;
 }
 
 p.about-description {
@@ -1377,9 +1384,18 @@ body .container.work-container .main-text {
     margin-top: 5rem;
     text-align: left;
     width: 100%;
+    padding-bottom: 32px;
+}
+
+.work-container .main-text h2 {
+    font-size: clamp(2.5rem, 4.7vw, 6.5rem);
+    font-weight: 3.5rem;
+    letter-spacing: -2px;
+    color: var(--h2_gray);
+    width: 100%;
+    background-color: #b86262;
     position: relative;
     left: 40px;
-    padding-bottom: 32px;
 }
 .container.work-container .main-text h2::before{
     content: "02";
@@ -1389,13 +1405,6 @@ body .container.work-container .main-text {
     position: absolute;
     left: -40px;
     z-index: -1;
-}
-
-.work-container .main-text h2 {
-    font-size: clamp(2.5rem, 4.7vw, 6.5rem);
-    font-weight: 3.5rem;
-    letter-spacing: -2px;
-    color: var(--h2_gray);
 }
 .desligado .main-text h2{
     color: #e4e4e4;
